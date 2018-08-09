@@ -1,0 +1,1079 @@
+{
+  "code": [
+    {
+      "id": 1,
+      "term": "map",
+      "description": "The map() method creates a new array with the results of calling a provided function on every element in the calling array.",
+      "language": "JavaScript",
+      "snipRawCode": "// basic example #1\nconst arr = [1,2,3,4,5]\nconst doubled = arr.map(num => num * 2); // [2, 4, 6, 8, 10]\n\n",
+      "snipRawTags": "basic map example, and another one",
+      "snipCode": [
+        "// basic example #1",
+        "const arr = [1,2,3,4,5]",
+        "const doubled = arr.map(num => num * 2); // [2, 4, 6, 8, 10]",
+        "",
+        ""
+      ],
+      "snipTags": [
+        "basic map example",
+        " and another one"
+      ]
+    },
+    {
+      "id": 2,
+      "term": "filter",
+      "description": "The filter() method creates a new array with all elements that pass the test implemented by the provided function.",
+      "language": "JavaScript",
+      "snipRawCode": "var products = [\n  { name: 'cucumber', type: 'vegetable', quantity: 12, price: 1 },\n  { name: 'banana', type: 'fruit', quantity: 10, price: 5 },\n  { name: 'celery', type: 'vegetable', quantity: 7, price: 9 },\n  { name: 'orange', type: 'fruit', quantity: 20, price: 14 },\n  { name: 'hamburger', type: 'meat', quantity: 5, price: 25 }\n];\n\nvar filtered = products.filter(prod => prod.type == 'fruit' && prod.quantity > 10);\n\n // [{name: 'orange', type: 'fruit', quantity: 20, price: 14}];",
+      "snipRawTags": "",
+      "snipCode": [
+        "var products = [",
+        "  { name: 'cucumber', type: 'vegetable', quantity: 12, price: 1 },",
+        "  { name: 'banana', type: 'fruit', quantity: 10, price: 5 },",
+        "  { name: 'celery', type: 'vegetable', quantity: 7, price: 9 },",
+        "  { name: 'orange', type: 'fruit', quantity: 20, price: 14 },",
+        "  { name: 'hamburger', type: 'meat', quantity: 5, price: 25 }",
+        "];",
+        "",
+        "var filtered = products.filter(prod => prod.type == 'fruit' && prod.quantity > 10);",
+        "",
+        " // [{name: 'orange', type: 'fruit', quantity: 20, price: 14}];"
+      ],
+      "snipTags": []
+    },
+    {
+      "id": 3,
+      "term": "reduce",
+      "description": "The reduce() method applies a function against an accumulator and each element in the array (from left to right) to reduce it to a single value.",
+      "language": "JavaScript",
+      "snipRawCode": "var numbers = [10,20,30];\n// ES6\nvar total = numbers.reduce((acc, num) => acc + num);\n// ES5\nvar total2 = numbers.reduce(function(acc, sum) {\n  return sum + acc;\n},0);\n// both return 60",
+      "snipRawTags": "",
+      "snipCode": [
+        "var numbers = [10,20,30];",
+        "// ES6",
+        "var total = numbers.reduce((acc, num) => acc + num);",
+        "// ES5",
+        "var total2 = numbers.reduce(function(acc, sum) {",
+        "  return sum + acc;",
+        "},0);",
+        "// both return 60"
+      ],
+      "snipTags": []
+    },
+    {
+      "id": 4,
+      "term": "indexOf (Arrays)",
+      "description": "The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.",
+      "language": "JavaScript",
+      "snipRawCode": "var beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];\n\nconsole.log(beasts.indexOf('bison'));\n// expected output: 1\n\n// start from index 2\nconsole.log(beasts.indexOf('bison', 2));\n// expected output: 4\n\nconsole.log(beasts.indexOf('giraffe'));\n// expected output: -1",
+      "snipRawTags": "",
+      "snipCode": [
+        "var beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];",
+        "",
+        "console.log(beasts.indexOf('bison'));",
+        "// expected output: 1",
+        "",
+        "// start from index 2",
+        "console.log(beasts.indexOf('bison', 2));",
+        "// expected output: 4",
+        "",
+        "console.log(beasts.indexOf('giraffe'));",
+        "// expected output: -1"
+      ],
+      "snipTags": []
+    },
+    {
+      "id": 5,
+      "term": "substr",
+      "description": "The substr() method extracts parts of a string, beginning at the character at the specified position, and returns the specified number of characters.",
+      "language": "JavaScript",
+      "snipRawCode": "",
+      "snipRawTags": "",
+      "snipCode": [],
+      "snipTags": []
+    },
+    {
+      "id": 6,
+      "term": "forEach",
+      "description": "",
+      "language": "JavaScript",
+      "snipRawCode": "",
+      "snipRawTags": "",
+      "snipCode": [],
+      "snipTags": []
+    },
+    {
+      "id": 7,
+      "term": "sort",
+      "description": "",
+      "language": "JavaScript",
+      "snipRawCode": "",
+      "snipRawTags": "",
+      "snipCode": [],
+      "snipTags": []
+    },
+    {
+      "id": 8,
+      "term": "reverse",
+      "description": "",
+      "language": "JavaScript",
+      "snipRawCode": "",
+      "snipRawTags": "",
+      "snipCode": [],
+      "snipTags": []
+    },
+    {
+      "id": 9,
+      "term": "join",
+      "description": "",
+      "language": "JavaScript",
+      "snipRawCode": "var newString = arr1.join(' - ');\n// stuff - cookie - food\nvar newString = arr1.join();\n// stuff,cookie,food\nvar newString = arr1.join('');\n// stuffcookiefood",
+      "snipRawTags": "basic join examples",
+      "snipCode": [
+        "var newString = arr1.join(' - ');",
+        "// stuff - cookie - food",
+        "var newString = arr1.join();",
+        "// stuff,cookie,food",
+        "var newString = arr1.join('');",
+        "// stuffcookiefood"
+      ],
+      "snipTags": [
+        "basic join examples"
+      ]
+    },
+    {
+      "id": 10,
+      "term": "shift",
+      "description": "The shift() method removes the first element from an array and returns that removed element. This method changes the length of the array.",
+      "language": "JavaScript",
+      "snipRawCode": "var array1 = [1, 2, 3];\n\nvar firstElement = array1.shift();\n\nconsole.log(array1);\n// expected output: Array [2, 3]\n\nconsole.log(firstElement);\n// expected output: 1\n",
+      "snipRawTags": "",
+      "snipCode": [
+        "var array1 = [1, 2, 3];",
+        "",
+        "var firstElement = array1.shift();",
+        "",
+        "console.log(array1);",
+        "// expected output: Array [2, 3]",
+        "",
+        "console.log(firstElement);",
+        "// expected output: 1",
+        ""
+      ],
+      "snipTags": []
+    },
+    {
+      "id": 11,
+      "term": "unshift",
+      "description": "",
+      "language": "JavaScript",
+      "snipRawCode": "",
+      "snipRawTags": "",
+      "snipCode": [],
+      "snipTags": []
+    },
+    {
+      "id": 12,
+      "term": "slice",
+      "description": "The slice() method returns a shallow copy of a portion of an array into a new array object selected from begin to end. The original array will not be modified.",
+      "language": "JavaScript",
+      "snipRawCode": "var array = [1,2,3,4,5]\nvar sub = array.slice(0, 3);\nconsole.log(array); // [1,2,3,4,5]\nconsole.log(sub) // [1,2,3]",
+      "snipRawTags": "basic slice example",
+      "snipCode": [
+        "var array = [1,2,3,4,5]",
+        "var sub = array.slice(0, 3);",
+        "console.log(array); // [1,2,3,4,5]",
+        "console.log(sub) // [1,2,3]"
+      ],
+      "snipTags": [
+        "basic slice example"
+      ]
+    },
+    {
+      "id": 13,
+      "term": "splice",
+      "description": "",
+      "language": "JavaScript",
+      "snipRawCode": "",
+      "snipRawTags": "",
+      "snipCode": [],
+      "snipTags": []
+    },
+    {
+      "id": 3141592653,
+      "term": "Cool Code",
+      "description": "Just random bits of code that I like.\n",
+      "language": "JavaScript",
+      "snipRawCode": "function randomColor() {  \n    var rand = '#' + Math.random().toString(16).slice(2,8);\n    return rand\n}\n",
+      "snipRawTags": "random color generator",
+      "snipCode": [
+        "function randomColor() {  ",
+        "    var rand = '#' + Math.random().toString(16).slice(2,8);",
+        "    return rand",
+        "}",
+        ""
+      ],
+      "snipTags": [
+        "random color generator"
+      ]
+    },
+    {
+      "id": 14,
+      "term": "Detecting Properties on Objects",
+      "description": "",
+      "language": "JavaScript",
+      "snipRawCode": "",
+      "snipRawTags": "hasOwnProperty",
+      "snipCode": [],
+      "snipTags": [
+        "hasOwnProperty"
+      ]
+    },
+    {
+      "id": 15,
+      "term": "Immediately Invoked Function Expressions (IIFEs)",
+      "description": "",
+      "language": "JavaScript",
+      "snipRawCode": "(function() {\n var thing = {'hello': 'other'};\n console.log('other: ', thing);\n})();",
+      "snipRawTags": "basic IIFE example",
+      "snipCode": [
+        "(function() {",
+        " var thing = {'hello': 'other'};",
+        " console.log('other: ', thing);",
+        "})();"
+      ],
+      "snipTags": [
+        "basic IIFE example"
+      ]
+    },
+    {
+      "id": 16,
+      "term": "Recursion",
+      "description": "Examples of recursive functions.",
+      "language": "JavaScript",
+      "snipRawCode": "",
+      "snipRawTags": "",
+      "snipCode": [],
+      "snipTags": []
+    },
+    {
+      "id": 17,
+      "term": "fetch",
+      "description": "",
+      "language": "JavaScript",
+      "snipRawCode": "",
+      "snipRawTags": "",
+      "snipCode": [],
+      "snipTags": []
+    },
+    {
+      "id": 18,
+      "term": "find",
+      "description": "The find() method is like filter but returns only one result and not an array of results that may fit the conditional.",
+      "language": "JavaScript",
+      "snipRawCode": "const comment = comments.find((comment) => comment.id === 823423);",
+      "snipRawTags": "find",
+      "snipCode": [
+        "const comment = comments.find((comment) => comment.id === 823423);"
+      ],
+      "snipTags": [
+        "find"
+      ]
+    },
+    {
+      "id": 19,
+      "term": "Immutability (Update)",
+      "description": "The snippets below are examples of changing arrays or objects without mutating the original.",
+      "language": "JavaScript",
+      "snipRawCode": "// copy the object by spreading properties into the new object but then reverse the 'isComplete' property\nexport const toggleTodo = (todo) => ({...todo, isComplete: !todo.isComplete});\n\n\n// Update an item and return new array\n// list = the array of items\n// updated = the updated item\nexport const updateTodo = (list, updated) => {\n\tconst updatedIndex = list.findIndex(item => item.id === updated.id)\n\n\t// the return statement slices the array from 0 to the item in the array we are updating, \n\t// puts in the updated item, 'updated', and then adds the rest of the array using the \n\t// spread operator that starts from 1 after the updated array's location to the end\n\treturn [\n\t\t...list.slice(0,updatedIndex),\n\t\tupdated,\n\t\t...list.slice(updatedIndex+1)\n\t]\n}",
+      "snipRawTags": "copy object without mutating original, toggle an object, copy object using spread operator, update item in array without mutation",
+      "snipCode": [
+        "// copy the object by spreading properties into the new object but then reverse the 'isComplete' property",
+        "export const toggleTodo = (todo) => ({...todo, isComplete: !todo.isComplete});",
+        "",
+        "",
+        "// Update an item and return new array",
+        "// list = the array of items",
+        "// updated = the updated item",
+        "export const updateTodo = (list, updated) => {",
+        "\tconst updatedIndex = list.findIndex(item => item.id === updated.id)",
+        "",
+        "\t// the return statement slices the array from 0 to the item in the array we are updating, ",
+        "\t// puts in the updated item, 'updated', and then adds the rest of the array using the ",
+        "\t// spread operator that starts from 1 after the updated array's location to the end",
+        "\treturn [",
+        "\t\t...list.slice(0,updatedIndex),",
+        "\t\tupdated,",
+        "\t\t...list.slice(updatedIndex+1)",
+        "\t]",
+        "}"
+      ],
+      "snipTags": [
+        "copy object without mutating original",
+        " toggle an object",
+        " copy object using spread operator",
+        " update item in array without mutation"
+      ]
+    },
+    {
+      "id": 20,
+      "term": "indexOf (Strings)",
+      "description": "The indexOf() method returns the index of (the position of) the first occurrence of a specified text in a string. It is NOT the same as search() because it cannot take regular expressions.",
+      "language": "JavaScript",
+      "snipRawCode": "",
+      "snipRawTags": "",
+      "snipCode": [],
+      "snipTags": []
+    },
+    {
+      "id": 21,
+      "term": "split",
+      "description": "The split() method is used to split a string into an array of substrings, and returns the new array. If an empty string ('') is used as a separator, the string is split between each character.",
+      "language": "JavaScript",
+      "snipRawCode": "return str.split('').reverse().join('');",
+      "snipRawTags": "reverse a string using split",
+      "snipCode": [
+        "return str.split('').reverse().join('');"
+      ],
+      "snipTags": [
+        "reverse a string using split"
+      ]
+    },
+    {
+      "id": 22,
+      "term": "Random Algorithms",
+      "description": "Random algorithms that I've seen or learned. Each algorithm has relevant tags.",
+      "language": "JavaScript",
+      "snipRawCode": "// The Palindrome function takes a string and can return true/false successfully in any of the below\n// return statements\nfunction palindrome(str) {\n\t//// CM Solution #1\n\treturn str.split('').reverse().join('') == str ? true : false;\n\n\t//// CM Solution #2: I can just return the conditional; the ternary above is excess logic\n\treturn str.split('').reverse().join('') === str;\n\n\t//// Solution #1\n\tconst reversed = str.split('').reverse().join('');\n\treturn str === reversed;\n\n\t//// Solution #2\n\t// one problem it has is that it compares the same two elements twice; the double comparison problem\n\t// NOTICE: I don't have to set str.split('') to an array. I can just call str\n\treturn str.split('').every((char, i) => {\n\t\treturn char === str[str.length -i - 1];\n\t});\n\n}",
+      "snipRawTags": "palindrome function, use split reverse and join to determine if palindrome",
+      "snipCode": [
+        "// The Palindrome function takes a string and can return true/false successfully in any of the below",
+        "// return statements",
+        "function palindrome(str) {",
+        "\t//// CM Solution #1",
+        "\treturn str.split('').reverse().join('') == str ? true : false;",
+        "",
+        "\t//// CM Solution #2: I can just return the conditional; the ternary above is excess logic",
+        "\treturn str.split('').reverse().join('') === str;",
+        "",
+        "\t//// Solution #1",
+        "\tconst reversed = str.split('').reverse().join('');",
+        "\treturn str === reversed;",
+        "",
+        "\t//// Solution #2",
+        "\t// one problem it has is that it compares the same two elements twice; the double comparison problem",
+        "\t// NOTICE: I don't have to set str.split('') to an array. I can just call str",
+        "\treturn str.split('').every((char, i) => {",
+        "\t\treturn char === str[str.length -i - 1];",
+        "\t});",
+        "",
+        "}"
+      ],
+      "snipTags": [
+        "palindrome function",
+        " use split reverse and join to determine if palindrome"
+      ]
+    },
+    {
+      "id": 23,
+      "term": "Regular Expressions",
+      "description": "",
+      "language": "JavaScript",
+      "snipRawCode": "var a1 = new RegExp('abc');\nvar word = '12314abcdefgh';\n \n// (String method) - String then RegExp => match, replace, search, split\n \nconsole.log(word.match(a1)); // [\"abc\", index: 5, input: \"12314abcdefgh\", groups: undefined]\n \nvar newWord = word.replace(a1, 'zzz'); // NOTE: replace doesn't alter the original string\nconsole.log(newWord); // 12314zzzdefgh => the new string\nconsole.log(word) // 12314abcdefgh => the original string\n \nconsole.log(word.search(a1)) // 5; 6th character\nconsole.log(newWord.search(a1)) // -1; not found\n \n// (RegExp method) - RegExp then String => exec, test\nvar arr = a1.exec(word) // Just like match but the string and RegExp are reversed\nconsole.log(arr) // [\"abc\", index: 5, input: \"12314abcdefgh\", groups: undefined]\n \nconsole.log(a1.test(word)) // true",
+      "snipRawTags": "Regular Expressions super basic",
+      "snipCode": [
+        "var a1 = new RegExp('abc');",
+        "var word = '12314abcdefgh';",
+        " ",
+        "// (String method) - String then RegExp => match, replace, search, split",
+        " ",
+        "console.log(word.match(a1)); // [\"abc\", index: 5, input: \"12314abcdefgh\", groups: undefined]",
+        " ",
+        "var newWord = word.replace(a1, 'zzz'); // NOTE: replace doesn't alter the original string",
+        "console.log(newWord); // 12314zzzdefgh => the new string",
+        "console.log(word) // 12314abcdefgh => the original string",
+        " ",
+        "console.log(word.search(a1)) // 5; 6th character",
+        "console.log(newWord.search(a1)) // -1; not found",
+        " ",
+        "// (RegExp method) - RegExp then String => exec, test",
+        "var arr = a1.exec(word) // Just like match but the string and RegExp are reversed",
+        "console.log(arr) // [\"abc\", index: 5, input: \"12314abcdefgh\", groups: undefined]",
+        " ",
+        "console.log(a1.test(word)) // true"
+      ],
+      "snipTags": [
+        "Regular Expressions super basic"
+      ]
+    },
+    {
+      "id": 24,
+      "term": "\"Use Strict\"",
+      "description": "see Advanced Javascript (AJ) Notes",
+      "language": "JavaScript",
+      "snipRawCode": "//Use Strict Notes:\n//- it makes debugging easier\n//- prevents you from accidentally creating global variables\n//- prevents you from naming variables that will be keywords in future JS verisons\n//- doesn't let you delete arguments to functions, functions, or variables\n\"use strict\"\n\nasim = 1; // this would not be allowed as it was never defined anywhere with \"var asim =\"",
+      "snipRawTags": "use strict definition and notes, use strict basic example",
+      "snipCode": [
+        "//Use Strict Notes:",
+        "//- it makes debugging easier",
+        "//- prevents you from accidentally creating global variables",
+        "//- prevents you from naming variables that will be keywords in future JS verisons",
+        "//- doesn't let you delete arguments to functions, functions, or variables",
+        "\"use strict\"",
+        "",
+        "asim = 1; // this would not be allowed as it was never defined anywhere with \"var asim =\""
+      ],
+      "snipTags": [
+        "use strict definition and notes",
+        " use strict basic example"
+      ]
+    },
+    {
+      "id": 25,
+      "term": "NaN (Not a Number, Not-A-Number)",
+      "description": "The global NaN property is a value representing Not-A-Number.",
+      "language": "JavaScript",
+      "snipRawCode": "//- NaN compared to any other value is false (`NaN == false`, `NaN == 1`, etc.)\n//- But weirdly enough, NaN compared to NaN is also false\n// - NaN equal to ANYTHING is always false, even when compared to itself\n//- `isNaN(NaN)` evaluates to true but see below:\n\nisNaN(NaN) // true\nisNaN(1) // evalutes to false; 1 is a number\nisNaN(\"1\") // evaluates to false; '1' is a string coerced into a number which makes it false\nisNaN(\"A\") // evaluates to true; 'A' is a string but cannot be coerced into a number which makes it true\n\n// How do we check if something is equal to NaN\n//- The question above is complex because:\n// -`NaN == NaN` is false AND\n// -`isNaN()` has the type coercision problems\n//- Answer: check if it is not-equal to itself. Remember, `NaN == NaN` evaluates to false and thus\n// NaN !== NaN will evaluate to true.",
+      "snipRawTags": "NaN notes and examples",
+      "snipCode": [
+        "//- NaN compared to any other value is false (`NaN == false`, `NaN == 1`, etc.)",
+        "//- But weirdly enough, NaN compared to NaN is also false",
+        "// - NaN equal to ANYTHING is always false, even when compared to itself",
+        "//- `isNaN(NaN)` evaluates to true but see below:",
+        "",
+        "isNaN(NaN) // true",
+        "isNaN(1) // evalutes to false; 1 is a number",
+        "isNaN(\"1\") // evaluates to false; '1' is a string coerced into a number which makes it false",
+        "isNaN(\"A\") // evaluates to true; 'A' is a string but cannot be coerced into a number which makes it true",
+        "",
+        "// How do we check if something is equal to NaN",
+        "//- The question above is complex because:",
+        "// -`NaN == NaN` is false AND",
+        "// -`isNaN()` has the type coercision problems",
+        "//- Answer: check if it is not-equal to itself. Remember, `NaN == NaN` evaluates to false and thus",
+        "// NaN !== NaN will evaluate to true."
+      ],
+      "snipTags": [
+        "NaN notes and examples"
+      ]
+    },
+    {
+      "id": 26,
+      "term": "Call, Bind and Apply Comparison",
+      "description": "",
+      "language": "JavaScript",
+      "snipRawCode": "",
+      "snipRawTags": "",
+      "snipCode": [],
+      "snipTags": []
+    },
+    {
+      "id": 27,
+      "term": "Constructor Pattern",
+      "description": "",
+      "language": "JavaScript",
+      "snipRawCode": "// Person constructor\nfunction Person(first_name, last_name) {\n this.first_name = first_name;\n this.last_name = last_name;\n};\n\n// Method #1: Instantiating a new Person\nvar dude = new Person(\"asim\", \"hussain\");\n\n// WRONG => this throws an error:\nvar dude = Person(\"asim\", \"hussain\");\n\n// Method #2: Instantiating a new Person\nvar dude = {};\nPerson.call(dude, \"asim\", \"hussain\");\n\nfunction Person(first_name, last_name) {\nthis.first_name = first_name;\nthis.last_name = last_name;\nthis.full_name = function() {\nreturn this.first_name + ' ' + this.last_name;\n}\n};\n\nconsole.log(dude.full_name()) // asim hussain\"",
+      "snipRawTags": "Constructor pattern of creating new object, OOP constructor",
+      "snipCode": [
+        "// Person constructor",
+        "function Person(first_name, last_name) {",
+        " this.first_name = first_name;",
+        " this.last_name = last_name;",
+        "};",
+        "",
+        "// Method #1: Instantiating a new Person",
+        "var dude = new Person(\"asim\", \"hussain\");",
+        "",
+        "// WRONG => this throws an error:",
+        "var dude = Person(\"asim\", \"hussain\");",
+        "",
+        "// Method #2: Instantiating a new Person",
+        "var dude = {};",
+        "Person.call(dude, \"asim\", \"hussain\");",
+        "",
+        "function Person(first_name, last_name) {",
+        "this.first_name = first_name;",
+        "this.last_name = last_name;",
+        "this.full_name = function() {",
+        "return this.first_name + ' ' + this.last_name;",
+        "}",
+        "};",
+        "",
+        "console.log(dude.full_name()) // asim hussain\""
+      ],
+      "snipTags": [
+        "Constructor pattern of creating new object",
+        " OOP constructor"
+      ]
+    },
+    {
+      "id": 28,
+      "term": "Objects",
+      "description": "",
+      "language": "JavaScript",
+      "snipRawCode": "var objectIsNew = JSON.parse(JSON.stringify(objectIsOld));",
+      "snipRawTags": "deep copy of an object, copy object values and not references",
+      "snipCode": [
+        "var objectIsNew = JSON.parse(JSON.stringify(objectIsOld));"
+      ],
+      "snipTags": [
+        "deep copy of an object",
+        " copy object values and not references"
+      ]
+    },
+    {
+      "id": 29,
+      "term": "Loops",
+      "description": "JavaScript loops",
+      "language": "JavaScript",
+      "snipRawCode": "",
+      "snipRawTags": "",
+      "snipCode": [],
+      "snipTags": []
+    },
+    {
+      "id": 30,
+      "term": "concat",
+      "description": "The concat() method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.",
+      "language": "JavaScript",
+      "snipRawCode": "var array1 = ['a', 'b', 'c'];\nvar array2 = ['d', 'e', 'f'];\n\narray1.concat(array2)\nconsole.log(array1) // [\"a\", \"b\", \"c\"] => does not change the array\n\narray3 = array1.concat(array2)\nconsole.log(array3) // [\"a\", \"b\", \"c\", \"d\", \"e\", \"f\"]",
+      "snipRawTags": "basic concat example, very nice",
+      "snipCode": [
+        "var array1 = ['a', 'b', 'c'];",
+        "var array2 = ['d', 'e', 'f'];",
+        "",
+        "array1.concat(array2)",
+        "console.log(array1) // [\"a\", \"b\", \"c\"] => does not change the array",
+        "",
+        "array3 = array1.concat(array2)",
+        "console.log(array3) // [\"a\", \"b\", \"c\", \"d\", \"e\", \"f\"]"
+      ],
+      "snipTags": [
+        "basic concat example",
+        " very nice"
+      ]
+    },
+    {
+      "id": 31,
+      "term": "FizzBuzz",
+      "description": "",
+      "language": "JavaScript",
+      "snipRawCode": "for(let i = 1; i <= n; i++) {\n\t// Is the number a multiple of 3 & 5\n\tif(i % 3 === 0 && i % 5 === 0) {\n\t\tconsole.log('fizzbuzz');\n\t} else if(i % 3 === 0) {\n\t\tconsole.log(\"fizz\");\n\t} else if(i % 5 === 0) {\n\t\tconsole.log(\"buzz\");\n\t} else {\n\t\tconsole.log(i)\t\n\t}\n\t\n}",
+      "snipRawTags": "basic FizzBuzz solution",
+      "snipCode": [
+        "for(let i = 1; i <= n; i++) {",
+        "\t// Is the number a multiple of 3 & 5",
+        "\tif(i % 3 === 0 && i % 5 === 0) {",
+        "\t\tconsole.log('fizzbuzz');",
+        "\t} else if(i % 3 === 0) {",
+        "\t\tconsole.log(\"fizz\");",
+        "\t} else if(i % 5 === 0) {",
+        "\t\tconsole.log(\"buzz\");",
+        "\t} else {",
+        "\t\tconsole.log(i)\t",
+        "\t}",
+        "\t",
+        "}"
+      ],
+      "snipTags": [
+        "basic FizzBuzz solution"
+      ]
+    },
+    {
+      "id": 32,
+      "term": "Prototypal Inheritance",
+      "description": "",
+      "language": "JavaScript",
+      "snipRawCode": "// Person object\nfunction Person(first_name, last_name) {\n this.first_name = first_name;\n this.last_name = last_name;\n this.full_name = function() {\n return this.first_name + ' ' + this.last_name;\n }\n};\nvar dude = new Person('asim', 'hussain');\nconsole.log(dude.full_name()) // asim hussain\n\n// BASIC PROBLEM: every new instance of Person we create has its OWN instance of the \n// \"full_name\" method created. That is a lot of duplicate methods. Instead, we can simply \n// add a method to the **prototype** of our object which can save a ton of memory.\n\nPerson.prototype.full_name_prototype = function() {\n return this.first_name + ' ' + this.last_name;\n}",
+      "snipRawTags": "the basic need for prototypal inheritance",
+      "snipCode": [
+        "// Person object",
+        "function Person(first_name, last_name) {",
+        " this.first_name = first_name;",
+        " this.last_name = last_name;",
+        " this.full_name = function() {",
+        " return this.first_name + ' ' + this.last_name;",
+        " }",
+        "};",
+        "var dude = new Person('asim', 'hussain');",
+        "console.log(dude.full_name()) // asim hussain",
+        "",
+        "// BASIC PROBLEM: every new instance of Person we create has its OWN instance of the ",
+        "// \"full_name\" method created. That is a lot of duplicate methods. Instead, we can simply ",
+        "// add a method to the **prototype** of our object which can save a ton of memory.",
+        "",
+        "Person.prototype.full_name_prototype = function() {",
+        " return this.first_name + ' ' + this.last_name;",
+        "}"
+      ],
+      "snipTags": [
+        "the basic need for prototypal inheritance"
+      ]
+    },
+    {
+      "id": 33,
+      "term": "Prototype Pattern (OOP)",
+      "description": "",
+      "language": "JavaScript",
+      "snipRawCode": "// - This is an alternative object-oriented solution for inheritance\n// - prototypal inheritance is just the prototype chain - there are no classes that we \n// have to worry about\n// - this is seen as a more natural type of OO programming in JavaScript\n\"use strict\"\nvar Person = {\n\tinit: function(first_name, last_name) {\n\t\tthis.first_name = first_name;\n\t\tthis.last_name = last_name;\n\t\treturn this;\n\t},\n\tfull_name: function() {\n\t\treturn this.first_name + ' ' + this.last_name;\n\t}\n}\n\n// Version #1: creating an instance\nvar asim = Object.create(Person);\nasim.init(\"asim\", \"hussain\");",
+      "snipRawTags": "prototype OO pattern",
+      "snipCode": [
+        "// - This is an alternative object-oriented solution for inheritance",
+        "// - prototypal inheritance is just the prototype chain - there are no classes that we ",
+        "// have to worry about",
+        "// - this is seen as a more natural type of OO programming in JavaScript",
+        "\"use strict\"",
+        "var Person = {",
+        "\tinit: function(first_name, last_name) {",
+        "\t\tthis.first_name = first_name;",
+        "\t\tthis.last_name = last_name;",
+        "\t\treturn this;",
+        "\t},",
+        "\tfull_name: function() {",
+        "\t\treturn this.first_name + ' ' + this.last_name;",
+        "\t}",
+        "}",
+        "",
+        "// Version #1: creating an instance",
+        "var asim = Object.create(Person);",
+        "asim.init(\"asim\", \"hussain\");"
+      ],
+      "snipTags": [
+        "prototype OO pattern"
+      ]
+    },
+    {
+      "id": 34,
+      "term": "Constructor vs. Prototype Pattern",
+      "description": "- \"Classical\" inheritance is really talking about the methods of object orientation.- A \"class\" that acts as a blueprint or architectural diagram for an object and then you need to create an instance of that class - in JavaScript, inheritance works using prototypes - in prototypal inheritance, new objects are\ncreated using previously created objects.\\n\n\\t- there is a parent \"Object\" for all objects in JavaScript\\n\n- There is a method of JavaScript of emulating the more classical object-oriented form using \nclasses and that's called the *Pseudo-Classical Pattern* but, again, it's only faking it...all\ninheritance in JavaScript is prototypal\\n",
+      "language": "JavaScript",
+      "snipRawCode": "// Constructor Pattern\nfunction Person(first_name, last_name) {\n\tthis.first_name = first_name;\n\tthis.last_name = last_name;\n};\n// Method #1: Instantiating a new Person\nvar dude = new Person(\"asim\", \"hussain\");\n\n// Method #2: Instantiating a new Person\nvar dude = {};\nPerson.call(dude, \"asim\", \"hussain\");\n\n///////////////////////////////////////////////////////////////////////////////////////////\n// Prototype Pattern\nvar Person = {\n\tinit: function(first_name, last_name) {\n\t\tthis.first_name = first_name;\n\t\tthis.last_name = last_name;\n\t\treturn this;\n\t},\n\tfull_name: function() {\n\t\treturn this.first_name + ' ' + this.last_name;\n\t}\n}\n\n// Version #1: creating an instance\nvar asim = Object.create(Person);\nasim.init(\"asim\", \"hussain\");\n\n// Version #2\nvar asim = Object.create(Person, {\n\tfirst_name: {\n\t\tvalue: \"Asim\"\n\t}, \n\tlast_name: {\n\t\tvalue: \"Hussain\"\n\t}\n});\n\n// Version #3: we'd need to create the PersonFactory IN ADDITION TO\n// the Prototype Pattern \"Person\" object\nfunction PersonFactory(first_name, last_name) {\n\tvar person = Object.create(Person);\n\tperson.first_name = first_name;\n\tperson.last_name = last_name;\n\treturn person;\n}\nvar asim = PersonFactory(\"asim\", \"hussain\");",
+      "snipRawTags": "Constructor Pattern vs. Prototype Pattern",
+      "snipCode": [
+        "// Constructor Pattern",
+        "function Person(first_name, last_name) {",
+        "\tthis.first_name = first_name;",
+        "\tthis.last_name = last_name;",
+        "};",
+        "// Method #1: Instantiating a new Person",
+        "var dude = new Person(\"asim\", \"hussain\");",
+        "",
+        "// Method #2: Instantiating a new Person",
+        "var dude = {};",
+        "Person.call(dude, \"asim\", \"hussain\");",
+        "",
+        "///////////////////////////////////////////////////////////////////////////////////////////",
+        "// Prototype Pattern",
+        "var Person = {",
+        "\tinit: function(first_name, last_name) {",
+        "\t\tthis.first_name = first_name;",
+        "\t\tthis.last_name = last_name;",
+        "\t\treturn this;",
+        "\t},",
+        "\tfull_name: function() {",
+        "\t\treturn this.first_name + ' ' + this.last_name;",
+        "\t}",
+        "}",
+        "",
+        "// Version #1: creating an instance",
+        "var asim = Object.create(Person);",
+        "asim.init(\"asim\", \"hussain\");",
+        "",
+        "// Version #2",
+        "var asim = Object.create(Person, {",
+        "\tfirst_name: {",
+        "\t\tvalue: \"Asim\"",
+        "\t}, ",
+        "\tlast_name: {",
+        "\t\tvalue: \"Hussain\"",
+        "\t}",
+        "});",
+        "",
+        "// Version #3: we'd need to create the PersonFactory IN ADDITION TO",
+        "// the Prototype Pattern \"Person\" object",
+        "function PersonFactory(first_name, last_name) {",
+        "\tvar person = Object.create(Person);",
+        "\tperson.first_name = first_name;",
+        "\tperson.last_name = last_name;",
+        "\treturn person;",
+        "}",
+        "var asim = PersonFactory(\"asim\", \"hussain\");"
+      ],
+      "snipTags": [
+        "Constructor Pattern vs. Prototype Pattern"
+      ]
+    },
+    {
+      "id": 35,
+      "term": "Every and Some",
+      "description": "The every() method tests whether all elements in the array pass the test implemented by the provided function. The some() method tests whether at least one element in the array passes the test implemented by the provided function. Both return either true or false.",
+      "language": "JavaScript",
+      "snipRawCode": "var computers = [\n { name: 'Apple', ram: 24 },\n { name: 'Compaq', ram: 4 },\n { name: 'Acer', ram: 32 }\n];\n\ncomputers.some(comp => comp.ram > 16) \t// true\ncomputers.every(comp => comp.ram > 16)\t// false",
+      "snipRawTags": "basic every and some example",
+      "snipCode": [
+        "var computers = [",
+        " { name: 'Apple', ram: 24 },",
+        " { name: 'Compaq', ram: 4 },",
+        " { name: 'Acer', ram: 32 }",
+        "];",
+        "",
+        "computers.some(comp => comp.ram > 16) \t// true",
+        "computers.every(comp => comp.ram > 16)\t// false"
+      ],
+      "snipTags": [
+        "basic every and some example"
+      ]
+    },
+    {
+      "id": 36,
+      "term": "Arrow Functions (ES6)",
+      "description": "",
+      "language": "JavaScript",
+      "snipRawCode": "// One Argument does NOT need parens around the num after the equals\nconst double = num => num * 2;\n\n// Zero Arguments DOES need parens around the empty string\nconst triple = () => 3;\n\n// Two+ Arguments NEED parens\nconst quadru = (num1, num2) => num1 * num2;\n\nconst numbers = [1,2,3];\n\n// Slimmed down Map function with One Argument\nnumbers.map(num => num * 2);",
+      "snipRawTags": "basic arrow function examples",
+      "snipCode": [
+        "// One Argument does NOT need parens around the num after the equals",
+        "const double = num => num * 2;",
+        "",
+        "// Zero Arguments DOES need parens around the empty string",
+        "const triple = () => 3;",
+        "",
+        "// Two+ Arguments NEED parens",
+        "const quadru = (num1, num2) => num1 * num2;",
+        "",
+        "const numbers = [1,2,3];",
+        "",
+        "// Slimmed down Map function with One Argument",
+        "numbers.map(num => num * 2);"
+      ],
+      "snipTags": [
+        "basic arrow function examples"
+      ]
+    },
+    {
+      "id": 37,
+      "term": "Classes (ES6)",
+      "description": "",
+      "language": "JavaScript",
+      "snipRawCode": "// ES5\nfunction Car(options) {\n\tthis.title = options.title;\n}\n\nCar.prototype.drive = function() {\n\treturn 'vroom';\n};\n \n\nfunction Toyota(options) {\n\tCar.call(this, options);\n\tthis.color = options.color; \n}\n \nToyota.prototype = Object.create(Car.prototype);\nToyota.prototype.constructor = Toyota;\nToyota.prototype.honk = function() {\n\treturn 'beep'\n};\n \nconst car = new Toyota({color: 'red', title: 'Daily Driver'});\n \nconsole.log(car.honk()); // beep\nconsole.log(car.drive()); // vroom\n \n \n// ES6\nclass Car {\n \tconstructor({title}) {\n \t\tthis.title = title\n \t}\n\tdrive() {\n\t\treturn 'vroom' \n\t}\n \n};\n\n\nclass Toyota extends Car {\n\tconstructor(options) {\n\t\tsuper(options);\t\t// Car.constructor()\n\t\tthis.color = options.color;\n\t}\n \n\thonk() {\n\t\treturn 'beep';\n\t};\n}\n \nconst toyota = new Toyota({color: 'red', title: 'CMs Car'});\n \nconsole.log(toyota.honk()) // beep\nconsole.log(toyota.drive()); // vroom",
+      "snipRawTags": "ES5 vs. ES6 Classes",
+      "snipCode": [
+        "// ES5",
+        "function Car(options) {",
+        "\tthis.title = options.title;",
+        "}",
+        "",
+        "Car.prototype.drive = function() {",
+        "\treturn 'vroom';",
+        "};",
+        " ",
+        "",
+        "function Toyota(options) {",
+        "\tCar.call(this, options);",
+        "\tthis.color = options.color; ",
+        "}",
+        " ",
+        "Toyota.prototype = Object.create(Car.prototype);",
+        "Toyota.prototype.constructor = Toyota;",
+        "Toyota.prototype.honk = function() {",
+        "\treturn 'beep'",
+        "};",
+        " ",
+        "const car = new Toyota({color: 'red', title: 'Daily Driver'});",
+        " ",
+        "console.log(car.honk()); // beep",
+        "console.log(car.drive()); // vroom",
+        " ",
+        " ",
+        "// ES6",
+        "class Car {",
+        " \tconstructor({title}) {",
+        " \t\tthis.title = title",
+        " \t}",
+        "\tdrive() {",
+        "\t\treturn 'vroom' ",
+        "\t}",
+        " ",
+        "};",
+        "",
+        "",
+        "class Toyota extends Car {",
+        "\tconstructor(options) {",
+        "\t\tsuper(options);\t\t// Car.constructor()",
+        "\t\tthis.color = options.color;",
+        "\t}",
+        " ",
+        "\thonk() {",
+        "\t\treturn 'beep';",
+        "\t};",
+        "}",
+        " ",
+        "const toyota = new Toyota({color: 'red', title: 'CMs Car'});",
+        " ",
+        "console.log(toyota.honk()) // beep",
+        "console.log(toyota.drive()); // vroom"
+      ],
+      "snipTags": [
+        "ES5 vs. ES6 Classes"
+      ]
+    },
+    {
+      "id": 38,
+      "term": "Fetch (ES6)",
+      "description": "",
+      "language": "JavaScript",
+      "snipRawCode": "const url = 'https://jsonplaceholder.typicode.com/posts12312/';\n \n// fetch(url)\n// \t.then(response => response.json())\n// \t.then(data => console.log(data));\n \n// the catch statement is only triggered if the network request flat out fails\n// it WON'T catch if you get a 404 or anything at 300 or above which is a failure\n// Use Axios\n \nfetch(url)\n\t.then(response => console.log(response))\n\t.catch(error => console.log('BAD', error));",
+      "snipRawTags": "fetch",
+      "snipCode": [
+        "const url = 'https://jsonplaceholder.typicode.com/posts12312/';",
+        " ",
+        "// fetch(url)",
+        "// \t.then(response => response.json())",
+        "// \t.then(data => console.log(data));",
+        " ",
+        "// the catch statement is only triggered if the network request flat out fails",
+        "// it WON'T catch if you get a 404 or anything at 300 or above which is a failure",
+        "// Use Axios",
+        " ",
+        "fetch(url)",
+        "\t.then(response => console.log(response))",
+        "\t.catch(error => console.log('BAD', error));"
+      ],
+      "snipTags": [
+        "fetch"
+      ]
+    },
+    {
+      "id": 39,
+      "term": "Promises",
+      "description": "",
+      "language": "JavaScript",
+      "snipRawCode": "//- three states of promises\n//\t- unresolved => waiting for something to finish\n//\t- resolved => something finished and it all went okay\n//\t\t- then (callback)\n//\t- rejected => something finished and something went bad\n//\t\t- catch (callback)\n//- the vast majority of promises are related to Ajax requests\n \nlet promise = new Promise((resolve, reject) => {\n\tsetTimeout(() => {\n\t\treject();\n\t}, 3000);\n});\n \npromise\n\t.then(() => console.log('finally finished'))\n\t.then(() => console.log('this ran as well'))\n\t.catch(() => console.log('Rejected promise!!!'))\n ",
+      "snipRawTags": "promises",
+      "snipCode": [
+        "//- three states of promises",
+        "//\t- unresolved => waiting for something to finish",
+        "//\t- resolved => something finished and it all went okay",
+        "//\t\t- then (callback)",
+        "//\t- rejected => something finished and something went bad",
+        "//\t\t- catch (callback)",
+        "//- the vast majority of promises are related to Ajax requests",
+        " ",
+        "let promise = new Promise((resolve, reject) => {",
+        "\tsetTimeout(() => {",
+        "\t\treject();",
+        "\t}, 3000);",
+        "});",
+        " ",
+        "promise",
+        "\t.then(() => console.log('finally finished'))",
+        "\t.then(() => console.log('this ran as well'))",
+        "\t.catch(() => console.log('Rejected promise!!!'))",
+        " "
+      ],
+      "snipTags": [
+        "promises"
+      ]
+    },
+    {
+      "id": 956720969499450000000,
+      "term": "CSS Positioning",
+      "description": "",
+      "language": "CSS",
+      "snipRawCode": ".main {\n   position: relative;\n}\n\n\n.btn {\n   position: absolute;\n   top: 1rem;\n}",
+      "snipRawTags": "",
+      "snipCode": [
+        ".main {",
+        "   position: relative;",
+        "}",
+        "",
+        "",
+        ".btn {",
+        "   position: absolute;",
+        "   top: 1rem;",
+        "}"
+      ],
+      "snipTags": []
+    },
+    {
+      "id": 362905722899510900000,
+      "term": "Meta Tags (all)",
+      "description": "",
+      "language": "HTML",
+      "snipRawCode": "<!--\n  The following 2 meta tags *must* come first in the <head>\n  to consistently ensure proper document rendering.\n  Any other head element should come *after* these tags.\n-->\n<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">\n\n<!--\n  Allows control over where resources are loaded from.\n  Place as early in the <head> as possible, as the tag  \n  only applies to resources that are declared after it.\n-->\n<meta http-equiv=\"Content-Security-Policy\" content=\"default-src 'self'\">\n\n<!-- Name of web application (only should be used if the website is used as an app) -->\n<meta name=\"application-name\" content=\"Application Name\">\n\n<!-- Theme Color for Chrome, Firefox OS and Opera -->\n<meta name=\"theme-color\" content=\"#4285f4\">\n\n<!-- Short description of the document (limit to 150 characters) -->\n<!-- This content *may* be used as a part of search engine results. -->\n<meta name=\"description\" content=\"A description of the page\">\n\n<!-- Control the behavior of search engine crawling and indexing -->\n<meta name=\"robots\" content=\"index,follow\"><!-- All Search Engines -->\n<meta name=\"googlebot\" content=\"index,follow\"><!-- Google Specific -->\n\n<!-- Tells Google not to show the sitelinks search box -->\n<meta name=\"google\" content=\"nositelinkssearchbox\">\n\n<!-- Tells Google not to provide a translation for this document -->\n<meta name=\"google\" content=\"notranslate\">\n\n<!-- Verify website ownership -->\n<meta name=\"google-site-verification\" content=\"verification_token\"><!-- Google Search Console -->\n<meta name=\"yandex-verification\" content=\"verification_token\"><!-- Yandex Webmasters -->\n<meta name=\"msvalidate.01\" content=\"verification_token\"><!-- Bing Webmaster Center -->\n<meta name=\"alexaVerifyID\" content=\"verification_token\"><!-- Alexa Console -->\n<meta name=\"p:domain_verify\" content=\"code_from_pinterest\"><!-- Pinterest Console-->\n<meta name=\"norton-safeweb-site-verification\" content=\"norton_code\"><!-- Norton Safe Web -->\n\n<!-- Identify the software used to build the document (i.e. - WordPress, Dreamweaver) -->\n<meta name=\"generator\" content=\"program\">\n\n<!-- Short description of your document's subject -->\n<meta name=\"subject\" content=\"your document's subject\">\n\n<!-- Gives a general age rating based on the document's content -->\n<meta name=\"rating\" content=\"General\">\n\n<!-- Allows control over how referrer information is passed -->\n<meta name=\"referrer\" content=\"no-referrer\">\n\n<!-- Disable automatic detection and formatting of possible phone numbers -->\n<meta name=\"format-detection\" content=\"telephone=no\">\n\n<!-- Completely opt out of DNS prefetching by setting to \"off\" -->\n<meta http-equiv=\"x-dns-prefetch-control\" content=\"off\">\n\n<!-- Stores a cookie on the client web browser for identification purposes -->\n<meta http-equiv=\"set-cookie\" content=\"name=value; expires=date; path=url\">\n\n<!-- Specifies the document to appear in a specific frame -->\n<meta http-equiv=\"Window-Target\" content=\"_value\">\n\n<!-- Geo tags -->\n<meta name=\"ICBM\" content=\"latitude, longitude\">\n<meta name=\"geo.position\" content=\"latitude;longitude\">\n<meta name=\"geo.region\" content=\"country[-state]\"><!-- Country code (ISO 3166-1): mandatory, state code (ISO 3166-2): optional; eg. content=\"US\" / content=\"US-NY\" -->\n<meta name=\"geo.placename\" content=\"city/town\"><!-- eg. content=\"New York City\" -->",
+      "snipRawTags": "meta tags",
+      "snipTags": [
+        "meta tags"
+      ],
+      "snipCode": [
+        "<!--",
+        "  The following 2 meta tags *must* come first in the <head>",
+        "  to consistently ensure proper document rendering.",
+        "  Any other head element should come *after* these tags.",
+        "-->",
+        "<meta charset=\"utf-8\">",
+        "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">",
+        "",
+        "<!--",
+        "  Allows control over where resources are loaded from.",
+        "  Place as early in the <head> as possible, as the tag  ",
+        "  only applies to resources that are declared after it.",
+        "-->",
+        "<meta http-equiv=\"Content-Security-Policy\" content=\"default-src 'self'\">",
+        "",
+        "<!-- Name of web application (only should be used if the website is used as an app) -->",
+        "<meta name=\"application-name\" content=\"Application Name\">",
+        "",
+        "<!-- Theme Color for Chrome, Firefox OS and Opera -->",
+        "<meta name=\"theme-color\" content=\"#4285f4\">",
+        "",
+        "<!-- Short description of the document (limit to 150 characters) -->",
+        "<!-- This content *may* be used as a part of search engine results. -->",
+        "<meta name=\"description\" content=\"A description of the page\">",
+        "",
+        "<!-- Control the behavior of search engine crawling and indexing -->",
+        "<meta name=\"robots\" content=\"index,follow\"><!-- All Search Engines -->",
+        "<meta name=\"googlebot\" content=\"index,follow\"><!-- Google Specific -->",
+        "",
+        "<!-- Tells Google not to show the sitelinks search box -->",
+        "<meta name=\"google\" content=\"nositelinkssearchbox\">",
+        "",
+        "<!-- Tells Google not to provide a translation for this document -->",
+        "<meta name=\"google\" content=\"notranslate\">",
+        "",
+        "<!-- Verify website ownership -->",
+        "<meta name=\"google-site-verification\" content=\"verification_token\"><!-- Google Search Console -->",
+        "<meta name=\"yandex-verification\" content=\"verification_token\"><!-- Yandex Webmasters -->",
+        "<meta name=\"msvalidate.01\" content=\"verification_token\"><!-- Bing Webmaster Center -->",
+        "<meta name=\"alexaVerifyID\" content=\"verification_token\"><!-- Alexa Console -->",
+        "<meta name=\"p:domain_verify\" content=\"code_from_pinterest\"><!-- Pinterest Console-->",
+        "<meta name=\"norton-safeweb-site-verification\" content=\"norton_code\"><!-- Norton Safe Web -->",
+        "",
+        "<!-- Identify the software used to build the document (i.e. - WordPress, Dreamweaver) -->",
+        "<meta name=\"generator\" content=\"program\">",
+        "",
+        "<!-- Short description of your document's subject -->",
+        "<meta name=\"subject\" content=\"your document's subject\">",
+        "",
+        "<!-- Gives a general age rating based on the document's content -->",
+        "<meta name=\"rating\" content=\"General\">",
+        "",
+        "<!-- Allows control over how referrer information is passed -->",
+        "<meta name=\"referrer\" content=\"no-referrer\">",
+        "",
+        "<!-- Disable automatic detection and formatting of possible phone numbers -->",
+        "<meta name=\"format-detection\" content=\"telephone=no\">",
+        "",
+        "<!-- Completely opt out of DNS prefetching by setting to \"off\" -->",
+        "<meta http-equiv=\"x-dns-prefetch-control\" content=\"off\">",
+        "",
+        "<!-- Stores a cookie on the client web browser for identification purposes -->",
+        "<meta http-equiv=\"set-cookie\" content=\"name=value; expires=date; path=url\">",
+        "",
+        "<!-- Specifies the document to appear in a specific frame -->",
+        "<meta http-equiv=\"Window-Target\" content=\"_value\">",
+        "",
+        "<!-- Geo tags -->",
+        "<meta name=\"ICBM\" content=\"latitude, longitude\">",
+        "<meta name=\"geo.position\" content=\"latitude;longitude\">",
+        "<meta name=\"geo.region\" content=\"country[-state]\"><!-- Country code (ISO 3166-1): mandatory, state code (ISO 3166-2): optional; eg. content=\"US\" / content=\"US-NY\" -->",
+        "<meta name=\"geo.placename\" content=\"city/town\"><!-- eg. content=\"New York City\" -->"
+      ]
+    },
+    {
+      "id": 30341896213617490000,
+      "term": "Flask Example",
+      "description": "",
+      "language": "Python",
+      "snipRawCode": "@app.route(\"/search\")\ndef search():\n    \"\"\"Search for places that match query\"\"\"\n    zip = request.args.get(\"q\")\n    likeZip = zip + \"%\"\n    place = \"%\" + zip + \"%\"\n\n    print(zip)\n    matches = db.execute(\"SELECT * FROM places WHERE postal_code LIKE :zip OR place_name LIKE :zip LIMIT 10\",zip=likeZip)\n    print(matches)\n    # TODO\n    return jsonify(matches)",
+      "snipRawTags": "",
+      "snipTags": [],
+      "snipCode": [
+        "@app.route(\"/search\")",
+        "def search():",
+        "    \"\"\"Search for places that match query\"\"\"",
+        "    zip = request.args.get(\"q\")",
+        "    likeZip = zip + \"%\"",
+        "    place = \"%\" + zip + \"%\"",
+        "",
+        "    print(zip)",
+        "    matches = db.execute(\"SELECT * FROM places WHERE postal_code LIKE :zip OR place_name LIKE :zip LIMIT 10\",zip=likeZip)",
+        "    print(matches)",
+        "    # TODO",
+        "    return jsonify(matches)"
+      ]
+    },
+    {
+      "id": 696120997087376600000,
+      "term": "Generate a PHP GUID",
+      "description": "",
+      "language": "PHP",
+      "snipRawCode": "function getGUID(){\n    $uuid;\n    if (function_exists('com_create_guid')){\n        $uuid = com_create_guid();\n    }else{\n        mt_srand((double)microtime()*10000);//optional for php 4.2.0 and up.\n        $charid = strtoupper(md5(uniqid(rand(), true)));\n        $hyphen = chr(45);  // \"-\"\n        $uuid = substr($charid, 0, 8).$hyphen\n            .substr($charid, 8, 4).$hyphen\n            .substr($charid,12, 4).$hyphen\n            .substr($charid,16, 4).$hyphen\n            .substr($charid,20,12);\n            \n    }\n\n    $uuid = str_replace('{', '', $uuid);\n    $uuid = str_replace('}', '', $uuid);\n    return $uuid;\n}",
+      "snipRawTags": "GUID generator",
+      "snipTags": [
+        "GUID generator"
+      ],
+      "snipCode": [
+        "function getGUID(){",
+        "    $uuid;",
+        "    if (function_exists('com_create_guid')){",
+        "        $uuid = com_create_guid();",
+        "    }else{",
+        "        mt_srand((double)microtime()*10000);//optional for php 4.2.0 and up.",
+        "        $charid = strtoupper(md5(uniqid(rand(), true)));",
+        "        $hyphen = chr(45);  // \"-\"",
+        "        $uuid = substr($charid, 0, 8).$hyphen",
+        "            .substr($charid, 8, 4).$hyphen",
+        "            .substr($charid,12, 4).$hyphen",
+        "            .substr($charid,16, 4).$hyphen",
+        "            .substr($charid,20,12);",
+        "            ",
+        "    }",
+        "",
+        "    $uuid = str_replace('{', '', $uuid);",
+        "    $uuid = str_replace('}', '', $uuid);",
+        "    return $uuid;",
+        "}"
+      ]
+    },
+    {
+      "id": 225814117538222440000,
+      "term": "Immutability (Delete)",
+      "description": "Delete an item from an array with mutating the array",
+      "language": "JavaScript",
+      "snipRawCode": "// \nexport const removeTodo = (list, id) => {\n\tconst removeIndex = list.findIndex(item => item.id === id)\n\treturn [\n\t\t...list.slice(0, removeIndex),\n\t\t...list.slice(removeIndex+1)\n\t]\n}",
+      "snipRawTags": "delete item without mutating array",
+      "snipTags": [
+        "delete item without mutating array"
+      ],
+      "snipCode": [
+        "// ",
+        "export const removeTodo = (list, id) => {",
+        "\tconst removeIndex = list.findIndex(item => item.id === id)",
+        "\treturn [",
+        "\t\t...list.slice(0, removeIndex),",
+        "\t\t...list.slice(removeIndex+1)",
+        "\t]",
+        "}"
+      ]
+    },
+    {
+      "id": 885314122320049100000,
+      "term": "Immutability (Add)",
+      "description": "Add item to an array without mutating the array",
+      "language": "JavaScript",
+      "snipRawCode": "// ES6\nexport const addTodo = (list, item) => [...list, item];\n\n// ES5\nexport const addTodo = (list, item) => list.concat(item);",
+      "snipRawTags": "add item without mutating array",
+      "snipCode": [
+        "// ES6",
+        "export const addTodo = (list, item) => [...list, item];",
+        "",
+        "// ES5",
+        "export const addTodo = (list, item) => list.concat(item);"
+      ],
+      "snipTags": [
+        "add item without mutating array"
+      ]
+    }
+  ]
+}

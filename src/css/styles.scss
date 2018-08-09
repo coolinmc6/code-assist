@@ -1,0 +1,457 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.brand-logo img {
+	max-height: 70px;
+}
+
+nav {
+	background-color: #fff;
+	border: 0px;
+	box-shadow: none;
+}
+
+.side-nav {
+	box-shadow: none;
+}
+
+/*************************************************************************************************/
+//
+// Universal Styles
+//
+//
+/*************************************************************************************************/
+
+.list-lang {
+	display: inline-block;
+	border: 1px solid transparent;
+	font-size: 0.7rem;
+	margin-left: 1rem;
+	border-radius: 4px;
+	text-transform: uppercase;
+	padding: 0.05rem 0.3rem;
+
+}
+
+.cm-javascript {
+	background-color: #EDDA68;
+	// font-weight: bold;
+	color: #fff;
+}
+
+.cm-html {
+	background-color: #D35736;
+	color: #fff;
+	font-weight: bold;;
+}
+
+.cm-css {
+	background-color: #2F50DC;
+	color: #fff;
+	
+}
+
+.cm-python {
+	background-color: #587C98;
+	// color: #EDDA68;
+	// border: 1px solid #EDDA68;
+	color: #fff;
+	text-transform: lowercase;
+	font-family: Arial;
+	// font-size: 1rem;
+}
+
+.cm-php {
+	background-color: #7C80AD;
+	color: #fff;
+}
+
+.big-tag {
+	font-size: 1.2rem;
+	padding: 0.2rem 0.6rem;
+	margin-left: 0.4rem;
+}
+
+
+/*************************************************************************************************/
+//
+// Counter
+//
+/*************************************************************************************************/
+
+
+
+.counter-main {
+	padding: 1rem;
+	h1 {
+		text-align: center;
+	}
+	button {
+		width: 50px;
+		border-radius: 2px;
+		padding: 0.5rem;
+		display: inline-block;
+		font-size: 2rem;
+	}
+
+	.count-parent {
+		margin: 0 auto;
+		width: 80%;
+		max-width: 450px;
+		vertical-align: top;
+		padding: 0;
+		text-align: center;
+
+		.count {
+			display: inline-block;
+			font-size: 3rem;
+			margin: 0 1rem;
+			width: 100px;
+			text-align: center;
+		}
+	}	
+}
+
+// Tweets
+
+.tweet-field {
+	margin: 0 auto;
+	max-width: 500px;
+}
+
+.tweet-parent {
+	max-width: 500px;
+	margin: 0 auto;
+	padding: 1rem;
+	border: 1px solid #eee;
+	border-radius: 2px;
+	.profile-img {
+		display: inline-block;
+		width: 29%;
+		border-radius: 50%;
+		max-height: 50px;
+		max-width: 50px;
+		margin-right: 10px;
+	}
+
+	.tweet-text {
+		display: inline-block;
+		width: 70%;
+		vertical-align: top;
+	}
+
+	.tweet-buttons {
+		
+	}
+}
+
+// JavaScript Cheat Sheet
+
+.js-helper-main {
+	// background-color: #FFC600;
+	min-height: 90vh;
+	
+	h1 {
+		margin-top: 0;
+		text-align: center;
+		padding-top: 0.5rem;
+	}
+
+	input.search {
+		margin: 0;
+	    text-align: center;
+	    outline: 0;
+	    border: 10px solid #F7F7F7;
+	    width: 100%;
+	    position: relative;
+	    top: 10px;
+	    z-index: 2;
+	    border-radius: 5px;
+	    font-size: 40px;
+	    box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
+	    background-color: #fff;
+	}
+
+	.search-header {
+		background-color: #bbdefb;
+		padding: 0.5rem;
+		font-size: 1.1rem;;
+	}
+
+	.special {
+		background-color: #ffcc00;
+	}
+
+	.code-tags {
+		display: inline-block;
+	    padding-left: 1.7rem;	
+	}
+	
+	
+	// .results > .search-result > (term + definition + tags + code array)
+	// .code-examples > .code-block 
+	.results {
+		padding-top: 1.5rem;
+		.search-result {
+			border-bottom: 1px solid #eee;
+			padding: 0.15rem;
+			cursor: pointer;
+			font-size: 1.4rem;
+			&:hover {
+				background-color: #f7f7f7;
+			}
+		}
+	}
+	.concept-page {
+		position: relative;
+		// border: 1px solid black;
+		border-radius: 2px;
+		padding: 1rem;
+		.close {
+			position: absolute;
+			top: 0.5rem;
+			right: 2rem;
+			font-size: 3rem;
+			color: #999;
+			cursor: pointer;
+			font-family: monospace;
+			transition: 0.25s all ease-in;
+			&:hover {
+				color: #444;
+			}
+		}
+		.code-examples {
+			.code-block {
+				padding: 1rem 3rem;
+				border: 2px solid #90caf9;
+				border-radius: 4px;
+				margin-bottom: 0.5rem;
+				margin-top: 0.6rem;
+			}
+
+			.code-tag {
+				font-size: 0.9rem;
+				background-color: #F44336;
+				color: white;
+				border-radius: 2px;
+				display: inline-block;
+				padding: 0.1rem 0.2rem;
+				margin: 0.5rem 0.3rem;
+			}
+		}
+	}
+}
+
+/*************************************************************************************************/
+// Code Editor
+
+.main-editor {
+
+	textarea {
+		font-family: monospace;
+	}
+
+	.btn.cancel {
+		margin-left: 1rem;
+	}
+}
+.main-collection {
+	max-height: 50vh;
+	overflow-y: scroll;
+	padding: 0 !important;
+	border: 1px solid #ddd;
+	border-radius: 2px;
+	// overflow: hidden;
+	
+	.collection {
+		margin-top: 0px;
+		.collection-item {
+			cursor: pointer;
+
+			&:hover {
+				background-color: #1e88e5;
+				color: #fff;
+			}
+
+
+			// .list-lang {
+			// 	display: inline-block;
+			// 	border: 1px solid transparent;
+			// 	font-size: 0.7rem;
+			// 	margin-left: 1rem;
+			// 	border-radius: 4px;
+			// 	text-transform: uppercase;
+			// 	padding: 0.05rem 0.3rem;
+
+			// }
+
+			// .cm-javascript {
+			// 	background-color: #EDDA68;
+			// 	// font-weight: bold;
+			// 	color: #fff;
+			// }
+
+			// .cm-html {
+			// 	background-color: #D35736;
+			// 	color: #fff;
+			// 	font-weight: bold;;
+			// }
+
+			// .cm-css {
+			// 	background-color: #2F50DC;
+			// 	color: #fff;
+				
+			// }
+
+			// .cm-python {
+			// 	background-color: #587C98;
+			// 	// color: #EDDA68;
+			// 	// border: 1px solid #EDDA68;
+			// 	color: #fff;
+			// 	text-transform: lowercase;
+			// 	font-family: Arial;
+			// 	// font-size: 1rem;
+			// }
+
+			// .cm-php {
+			// 	background-color: #7C80AD;
+			// 	color: #fff;
+			// }
+
+
+
+
+		}	
+	}
+	
+}
+.finished-code {
+	.cm-tag {
+		font-size: 0.9rem;
+		background-color: #F44336;
+		color: white;
+		border-radius: 2px;
+		display: inline-block;
+		padding: 0.1rem 0.2rem;
+		margin: 0.5rem 0.3rem;
+	}	
+}
+
+
+.main-code-block {
+	font-family: monospace;
+}
+
+
+
+/*************************************************************************************************/
+// Todo List
+
+.todo-item {
+	position: relative;
+
+	i.material-icons {
+		position: absolute;
+		
+		top: 0.4rem;
+		cursor: pointer
+	}
+
+	.delete-item {
+		right: 0.5rem;
+		transition: color 0.3s ease-in;
+		&:hover {
+			color: #f66;;
+		}
+	}
+
+	.complete-item {
+		right: 2.5rem;
+		color: #bdb;
+
+		&:hover {
+			font-weight: bold;
+		}	
+	}
+
+	.edit-item {
+		right: 4.7rem;
+		color: #aaa;
+		&:hover {
+			font-weight: bold;
+			color: #333;
+		}
+	}
+
+	.complete-item.complete {
+		
+		color: green;
+	}
+}
+
+.todo-item.complete {
+	text-decoration: line-through;
+	font-style: italic;
+}
+
+
+// World Cup
+
+.score-input {
+	
+}
+
+.group-parent {
+	h4 {
+		text-align: center;
+	}
+	.games-list {
+		.game-row {
+			vertical-align: top;
+			height: 50px;
+			input.score-input {
+				margin-bottom: 0px;
+				margin-left: 2px;
+				margin-right: 2px;
+				display: inline-block;
+				width: 30px !important;
+				text-align: center;
+				font-size: 1.8rem;
+
+			}
+
+			.team-name {
+				display: inline-block;
+				width: 85px;
+				text-align: center;
+				vertical-align: bottom;
+			}
+
+			.team-flag {
+				margin: 0 10px;
+				vertical-align: bottom;
+			}
+			.match-num {
+				display: inline-block;
+				width: 80px;
+				font-size: 0.9rem;
+				font-family: monospace;
+				text-transform: uppercase;
+				font-weight: bold;
+				text-align: center;
+
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.group-parent {
+		vertical-align: top;
+		display: inline-block;
+		width: 49%;
+	}
+}
