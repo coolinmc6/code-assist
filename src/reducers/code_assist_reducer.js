@@ -1,4 +1,5 @@
 import {
+	ENV,
 	UPDATE_SEARCH, 
 	FETCH_LIBRARY,
 	CHANGE_PAGE,
@@ -18,11 +19,18 @@ const defaultJSNotes = {
 export default function(state = defaultJSNotes, action) {
 	switch(action.type) {
 		case FETCH_LIBRARY:
-			console.log(action.payload.data["code"]);
+			let temp = [];
+			if(ENV == 'dev') {
+				temp = [...action.payload.data];
+			} else {
+				temp = [...action.payload.data["code"]];
+			}
+
+			
 			return {
 				...state,
 				// library: [...action.payload.data["code"]]
-				library: [...action.payload.data]
+				library: [...temp]
 			}
 			
 		case UPDATE_SEARCH:

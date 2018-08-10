@@ -61,7 +61,7 @@ class JSHelper extends Component {
 
 	renderAllSearch() {
 		if(this.props.code_blocks.search === '') {
-			return <div>Enter a JavaScript function, concept, or keyword above</div>
+			return <div>Enter a programming function, concept, or keyword above</div>
 		} 
 		else if(!this.props.code_blocks.focus) {
 			return;
@@ -153,9 +153,9 @@ class JSHelper extends Component {
 	render() {
 		return (
 			<div className="js-helper-main">
-				<h1>Stuff</h1>
+				
 				<div className="container">
-					<input type="text" className="search" placeholder="JavaScript concept or function" 
+					<input type="text" className="search" placeholder="Programming concept or function" 
 						value={this.props.code_blocks.search}
 						onChange={(e) => this.props.updateSearch(e.target.value)}
 						// onFocus={() => this.props.changeFocus(true)}

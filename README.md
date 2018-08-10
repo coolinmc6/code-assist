@@ -8,3 +8,19 @@ npm i axios prismjs react-redux redux redux-promise react-router react-router-do
 json-server library.json -p 3004
 ```
 
+## ToDo
+
+- Make responsive and work well on mobile
+	+ shrink search bar text
+	+ make search results smaller
+	+ less padding on code box and smaller text
+	+ shrink tag text and give vertical margin
+- Fill out definitions for empty JS snippets
+- About Page
+- show language tag
+- Add 50 PHP snippets
+- Add 25 CSS snippets
+- Add 25 HTML snippets
+	+ head tags
+	+ accessibility attributes
+- 

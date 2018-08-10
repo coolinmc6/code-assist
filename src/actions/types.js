@@ -1,3 +1,7 @@
+// Environment
+// export const ENV = 'dev';
+export const ENV = 'prod';
+
 // Code Assist
 export const UPDATE_SEARCH = 'UPDATE_SEARCH';
 export const FETCH_LIBRARY = 'FETCH_LIBRARY';

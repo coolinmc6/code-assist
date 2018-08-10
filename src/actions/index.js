@@ -8,7 +8,8 @@ import {
 	CHANGE_INPUT,
 	SAVE_NEW_CODE_OBJECT,
 	UPDATE_EXISTING_CODE_OBJECT,
-	DELETE_CODE_OBJECT
+	DELETE_CODE_OBJECT,
+	ENV
 } from './types';
 
 import axios from 'axios';
@@ -16,6 +17,8 @@ import axios from 'axios';
 // JSON SERVER VARIABLES
 const port = 3004;
 const codeEditorURL = `http://localhost:${port}/code`;
+
+// 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 // JavaScript Helper
@@ -30,8 +33,13 @@ export function updateSearch(text) {
 
 export function fetchLibrary()  {
 	const rand = Math.floor(Math.random()*1000000)
-	// const url = `https://raw.githubusercontent.com/coolinmc6/react-playground/master/library.json?${rand}`;
-	const url = `http://localhost:3004/code`
+	let url;
+	if(ENV == 'dev') {
+		url = `http://localhost:3004/code`;
+	} else {
+		url = 'https://raw.githubusercontent.com/coolinmc6/code-assist/master/library.json';
+	}
+
 	const request = axios.get(url);
 
 	return {

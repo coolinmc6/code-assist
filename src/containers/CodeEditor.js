@@ -11,7 +11,7 @@ import { generateID, languageIdentifier } from '../helpers/Helpers'
 // import CodeObject from '../components/CodeObject';
 
 import '../css/prism.css';
-import '../css/materialize.css';
+// import '../css/materialize.css';
 
 import Prism from 'prismjs';
 
@@ -439,8 +439,8 @@ class CodeEditor extends Component {
 
 	render() {
 		return (
-			<div className="js-helper-main">
-				<h1>Code Editor!</h1>
+			<div className="js-helper-main container">
+				<h1>Code Editor</h1>
 				<div className="row">
 					<div className="main-editor col s8">
 						{this.renderCodeInputs()}

@@ -6,7 +6,7 @@
       "description": "The map() method creates a new array with the results of calling a provided function on every element in the calling array.",
       "language": "JavaScript",
       "snipRawCode": "// basic example #1\nconst arr = [1,2,3,4,5]\nconst doubled = arr.map(num => num * 2); // [2, 4, 6, 8, 10]\n\n",
-      "snipRawTags": "basic map example, and another one",
+      "snipRawTags": "basic map example",
       "snipCode": [
         "// basic example #1",
         "const arr = [1,2,3,4,5]",
@@ -15,8 +15,7 @@
         ""
       ],
       "snipTags": [
-        "basic map example",
-        " and another one"
+        "basic map example"
       ]
     },
     {
@@ -536,7 +535,7 @@
       "term": "concat",
       "description": "The concat() method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.",
       "language": "JavaScript",
-      "snipRawCode": "var array1 = ['a', 'b', 'c'];\nvar array2 = ['d', 'e', 'f'];\n\narray1.concat(array2)\nconsole.log(array1) // [\"a\", \"b\", \"c\"] => does not change the array\n\narray3 = array1.concat(array2)\nconsole.log(array3) // [\"a\", \"b\", \"c\", \"d\", \"e\", \"f\"]",
+      "snipRawCode": "var array1 = ['a', 'b', 'c'];\nvar array2 = ['d', 'e', 'f'];\n\narray1.concat(array2)\nconsole.log(array1) // [\"a\", \"b\", \"c\"] => does not change the array\n\narray3 = array1.concat(array2)\nconsole.log(array3) // [\"a\", \"b\", \"c\", \"d\", \"e\", \"f\"]\n\n// concat",
       "snipRawTags": "basic concat example, very nice",
       "snipCode": [
         "var array1 = ['a', 'b', 'c'];",
@@ -546,7 +545,9 @@
         "console.log(array1) // [\"a\", \"b\", \"c\"] => does not change the array",
         "",
         "array3 = array1.concat(array2)",
-        "console.log(array3) // [\"a\", \"b\", \"c\", \"d\", \"e\", \"f\"]"
+        "console.log(array3) // [\"a\", \"b\", \"c\", \"d\", \"e\", \"f\"]",
+        "",
+        "// concat"
       ],
       "snipTags": [
         "basic concat example",

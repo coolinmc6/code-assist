@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box; }
+
 body {
   margin: 0;
   padding: 0;
@@ -49,64 +52,19 @@ nav {
   color: #fff; }
 
 .big-tag {
-  font-size: 1.2rem;
-  padding: 0.2rem 0.6rem;
-  margin-left: 0.4rem; }
+  font-size: 1.0rem;
+  padding: 0.2rem 0.5rem;
+  margin-left: 0.3rem;
+  margin-bottom: 0.1rem; }
+
+@media screen and (min-width: 600px) {
+  .big-tag {
+    font-size: 1.2rem;
+    padding: 0.2rem 0.6rem;
+    margin-left: 0.4rem; } }
 
 /*************************************************************************************************/
 /*************************************************************************************************/
-.counter-main {
-  padding: 1rem; }
-
-.counter-main h1 {
-  text-align: center; }
-
-.counter-main button {
-  width: 50px;
-  border-radius: 2px;
-  padding: 0.5rem;
-  display: inline-block;
-  font-size: 2rem; }
-
-.counter-main .count-parent {
-  margin: 0 auto;
-  width: 80%;
-  max-width: 450px;
-  vertical-align: top;
-  padding: 0;
-  text-align: center; }
-
-.counter-main .count-parent .count {
-  display: inline-block;
-  font-size: 3rem;
-  margin: 0 1rem;
-  width: 100px;
-  text-align: center; }
-
-.tweet-field {
-  margin: 0 auto;
-  max-width: 500px; }
-
-.tweet-parent {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 1rem;
-  border: 1px solid #eee;
-  border-radius: 2px; }
-
-.tweet-parent .profile-img {
-  display: inline-block;
-  width: 29%;
-  border-radius: 50%;
-  max-height: 50px;
-  max-width: 50px;
-  margin-right: 10px; }
-
-.tweet-parent .tweet-text {
-  display: inline-block;
-  width: 70%;
-  vertical-align: top; }
-
 .js-helper-main {
   min-height: 90vh; }
 
@@ -115,17 +73,20 @@ nav {
   text-align: center;
   padding-top: 0.5rem; }
 
+.js-helper-main .container {
+  width: 96%; }
+
 .js-helper-main input.search {
-  margin: 0;
+  margin: 0 auto;
   text-align: center;
   outline: 0;
   border: 10px solid #F7F7F7;
-  width: 100%;
+  width: 95%;
   position: relative;
   top: 10px;
   z-index: 2;
   border-radius: 5px;
-  font-size: 40px;
+  font-size: 1.1rem;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
   background-color: #fff; }
 
@@ -148,7 +109,7 @@ nav {
   border-bottom: 1px solid #eee;
   padding: 0.15rem;
   cursor: pointer;
-  font-size: 1.4rem; }
+  font-size: 1.0rem; }
 
 .js-helper-main .results .search-result:hover {
   background-color: #f7f7f7; }
@@ -172,20 +133,44 @@ nav {
   color: #444; }
 
 .js-helper-main .concept-page .code-examples .code-block {
-  padding: 1rem 3rem;
+  padding: 0.3rem 0.5rem;
   border: 2px solid #90caf9;
   border-radius: 4px;
   margin-bottom: 0.5rem;
   margin-top: 0.6rem; }
 
-.js-helper-main .concept-page .code-examples .code-tag {
+.js-helper-main .concept-page .code-examples .code-block code {
+  font-size: 0.9rem; }
+
+.js-helper-main .concept-page .code-examples .code-tags {
   font-size: 0.9rem;
-  background-color: #F44336;
   color: white;
   border-radius: 2px;
   display: inline-block;
   padding: 0.1rem 0.2rem;
   margin: 0.5rem 0.3rem; }
+
+.js-helper-main .concept-page .code-examples .code-tags .chip {
+  height: 30px;
+  line-height: 30px;
+  font-size: 0.8rem; }
+
+@media screen and (min-width: 600px) {
+  .js-helper-main {
+    font-size: 40px; }
+  .js-helper-main .results .search-result {
+    font-size: 1.4rem; }
+  .js-helper-main .results .search-result:hover {
+    background-color: #f7f7f7; }
+  .js-helper-main .concept-page .code-examples .code-block {
+    padding: 1rem 3rem; }
+  .js-helper-main .concept-page .code-examples .code-block code {
+    font-size: 1.0rem; }
+  .js-helper-main .concept-page .code-examples .code-tag {
+    font-size: 0.9rem; }
+  .js-helper-main .concept-page .code-examples .code-tag .chip {
+    height: 32px;
+    line-height: 32px; } }
 
 /*************************************************************************************************/
 .main-editor textarea {
@@ -195,7 +180,7 @@ nav {
   margin-left: 1rem; }
 
 .main-collection {
-  max-height: 50vh;
+  max-height: 80vh;
   overflow-y: scroll;
   padding: 0 !important;
   border: 1px solid #ddd;

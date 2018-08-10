@@ -15,6 +15,7 @@ import App from './App';
 
 // Containers
 import CodeAssist from './containers/CodeAssist';
+import CodeEditor from './containers/CodeEditor';
 
 // React Router
 import {
@@ -35,6 +36,7 @@ ReactDOM.render(
 			<div>
 				<NavBar />
 				<Route exact path="/code-assist/" component={CodeAssist}/>
+				<Route path="/code-assist/code-editor" component={CodeEditor}/>
 			</div>
 		</Router>
 	</Provider>
