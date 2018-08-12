@@ -437,6 +437,31 @@ class CodeEditor extends Component {
 		
 	}
 
+	renderLanguageCount() {
+		const languages = {Total: 0};
+		console.log(this.props.my_code)
+
+		this.props.my_code.library.map(obj => {
+			if(languages[obj.language]) {
+				languages[obj.language]++;
+			} else {
+				languages[obj.language] = 1;
+			}
+			languages['Total']++
+		})
+		
+		console.log(languages);
+
+		return Object.keys(languages).map(key => {
+			
+			return (
+				<div className={`language-count cm-${languageIdentifier(key)}`} key={key}>{key}: {languages[key]}</div>
+			);
+		})
+
+
+	}
+
 	render() {
 		return (
 			<div className="js-helper-main container">
@@ -446,6 +471,7 @@ class CodeEditor extends Component {
 						{this.renderCodeInputs()}
 					</div>
 					<div className="main-collection col s4">
+						<div className="language-count-parent">{this.renderLanguageCount()}</div>
 						<ul className="collection">
 							{this.renderCodeList()}
 						</ul>

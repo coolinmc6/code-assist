@@ -1075,6 +1075,51 @@
       "snipTags": [
         "add item without mutating array"
       ]
+    },
+    {
+      "id": 893943241687094900000,
+      "term": "strpos",
+      "description": "Find the position of the first occurrence of a substring in a string. It can also be used to determine whether a string contains another string. This function is case sensitive.",
+      "language": "PHP",
+      "snipRawCode": "$a = 'How are you?';\n\nif (strpos($a, 'are') !== false) {\n    echo 'true<br>';        // true\n    echo strpos($a, 'are'); // 4\n} else {\n\techo 'false';\n}",
+      "snipRawTags": "string in a string, string position, string contain another string",
+      "snipCode": [
+        "$a = 'How are you?';",
+        "",
+        "if (strpos($a, 'are') !== false) {",
+        "    echo 'true<br>';        // true",
+        "    echo strpos($a, 'are'); // 4",
+        "} else {",
+        "\techo 'false';",
+        "}"
+      ],
+      "snipTags": [
+        "string in a string",
+        " string position",
+        " string contain another string"
+      ]
+    },
+    {
+      "id": 177920431607942580000,
+      "term": "stripos",
+      "description": "Find the position of the first occurrence of a case-insensitive substring in a string. This can also be used to find whether a string IS in another string.",
+      "language": "PHP",
+      "snipRawCode": "$a = 'How are you?';\n\nif (stripos($a, 'ARE') !== false) {\n    echo 'true<br>';\n    echo strpos($a, 'are');\n} else {\n\techo 'false';\n}",
+      "snipRawTags": "string in a string (case insensitive), find string in a string",
+      "snipTags": [
+        "string in a string (case insensitive)",
+        " find string in a string"
+      ],
+      "snipCode": [
+        "$a = 'How are you?';",
+        "",
+        "if (stripos($a, 'ARE') !== false) {",
+        "    echo 'true<br>';",
+        "    echo strpos($a, 'are');",
+        "} else {",
+        "\techo 'false';",
+        "}"
+      ]
     }
   ]
 }
