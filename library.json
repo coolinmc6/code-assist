@@ -1238,6 +1238,29 @@
         "$length = strlen('hello');",
         "echo $length; // 5"
       ]
+    },
+    {
+      "id": 277260090569807040000,
+      "term": "validate email",
+      "description": "Validate an email using RegEx in JavaScript.",
+      "language": "JavaScript",
+      "snipRawCode": "function validateEmail(email) {\n    var re = /^(([^<>()\\[\\]\\\\.,;:\\s@\"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/;\n    return re.test(String(email).toLowerCase());\n}\n\nif (validateEmail(email)) {\n    // email is good\n  } else {\n    // email is bad\n  }",
+      "snipRawTags": "email validation",
+      "snipTags": [
+        "email validation"
+      ],
+      "snipCode": [
+        "function validateEmail(email) {",
+        "    var re = /^(([^<>()\\[\\]\\\\.,;:\\s@\"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/;",
+        "    return re.test(String(email).toLowerCase());",
+        "}",
+        "",
+        "if (validateEmail(email)) {",
+        "    // email is good",
+        "  } else {",
+        "    // email is bad",
+        "  }"
+      ]
     }
   ]
 }
