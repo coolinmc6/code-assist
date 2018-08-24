@@ -902,10 +902,7 @@
       "description": "",
       "language": "HTML",
       "snipRawCode": "<!--\n  The following 2 meta tags *must* come first in the <head>\n  to consistently ensure proper document rendering.\n  Any other head element should come *after* these tags.\n-->\n<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">\n\n<!--\n  Allows control over where resources are loaded from.\n  Place as early in the <head> as possible, as the tag  \n  only applies to resources that are declared after it.\n-->\n<meta http-equiv=\"Content-Security-Policy\" content=\"default-src 'self'\">\n\n<!-- Name of web application (only should be used if the website is used as an app) -->\n<meta name=\"application-name\" content=\"Application Name\">\n\n<!-- Theme Color for Chrome, Firefox OS and Opera -->\n<meta name=\"theme-color\" content=\"#4285f4\">\n\n<!-- Short description of the document (limit to 150 characters) -->\n<!-- This content *may* be used as a part of search engine results. -->\n<meta name=\"description\" content=\"A description of the page\">\n\n<!-- Control the behavior of search engine crawling and indexing -->\n<meta name=\"robots\" content=\"index,follow\"><!-- All Search Engines -->\n<meta name=\"googlebot\" content=\"index,follow\"><!-- Google Specific -->\n\n<!-- Tells Google not to show the sitelinks search box -->\n<meta name=\"google\" content=\"nositelinkssearchbox\">\n\n<!-- Tells Google not to provide a translation for this document -->\n<meta name=\"google\" content=\"notranslate\">\n\n<!-- Verify website ownership -->\n<meta name=\"google-site-verification\" content=\"verification_token\"><!-- Google Search Console -->\n<meta name=\"yandex-verification\" content=\"verification_token\"><!-- Yandex Webmasters -->\n<meta name=\"msvalidate.01\" content=\"verification_token\"><!-- Bing Webmaster Center -->\n<meta name=\"alexaVerifyID\" content=\"verification_token\"><!-- Alexa Console -->\n<meta name=\"p:domain_verify\" content=\"code_from_pinterest\"><!-- Pinterest Console-->\n<meta name=\"norton-safeweb-site-verification\" content=\"norton_code\"><!-- Norton Safe Web -->\n\n<!-- Identify the software used to build the document (i.e. - WordPress, Dreamweaver) -->\n<meta name=\"generator\" content=\"program\">\n\n<!-- Short description of your document's subject -->\n<meta name=\"subject\" content=\"your document's subject\">\n\n<!-- Gives a general age rating based on the document's content -->\n<meta name=\"rating\" content=\"General\">\n\n<!-- Allows control over how referrer information is passed -->\n<meta name=\"referrer\" content=\"no-referrer\">\n\n<!-- Disable automatic detection and formatting of possible phone numbers -->\n<meta name=\"format-detection\" content=\"telephone=no\">\n\n<!-- Completely opt out of DNS prefetching by setting to \"off\" -->\n<meta http-equiv=\"x-dns-prefetch-control\" content=\"off\">\n\n<!-- Stores a cookie on the client web browser for identification purposes -->\n<meta http-equiv=\"set-cookie\" content=\"name=value; expires=date; path=url\">\n\n<!-- Specifies the document to appear in a specific frame -->\n<meta http-equiv=\"Window-Target\" content=\"_value\">\n\n<!-- Geo tags -->\n<meta name=\"ICBM\" content=\"latitude, longitude\">\n<meta name=\"geo.position\" content=\"latitude;longitude\">\n<meta name=\"geo.region\" content=\"country[-state]\"><!-- Country code (ISO 3166-1): mandatory, state code (ISO 3166-2): optional; eg. content=\"US\" / content=\"US-NY\" -->\n<meta name=\"geo.placename\" content=\"city/town\"><!-- eg. content=\"New York City\" -->",
-      "snipRawTags": "meta tags",
-      "snipTags": [
-        "meta tags"
-      ],
+      "snipRawTags": "meta tags, head tags",
       "snipCode": [
         "<!--",
         "  The following 2 meta tags *must* come first in the <head>",
@@ -979,6 +976,10 @@
         "<meta name=\"geo.position\" content=\"latitude;longitude\">",
         "<meta name=\"geo.region\" content=\"country[-state]\"><!-- Country code (ISO 3166-1): mandatory, state code (ISO 3166-2): optional; eg. content=\"US\" / content=\"US-NY\" -->",
         "<meta name=\"geo.placename\" content=\"city/town\"><!-- eg. content=\"New York City\" -->"
+      ],
+      "snipTags": [
+        "meta tags",
+        " head tags"
       ]
     },
     {
