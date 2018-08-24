@@ -1,6 +1,6 @@
 // Environment
-export const ENV = 'dev';
-// export const ENV = 'prod';
+// export const ENV = 'dev';
+export const ENV = 'prod';
 
 // Code Assist
 export const UPDATE_SEARCH = 'UPDATE_SEARCH';
