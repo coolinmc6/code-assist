@@ -1094,48 +1094,148 @@
       ]
     },
     {
-      "id": 893943241687094900000,
-      "term": "strpos",
-      "description": "Find the position of the first occurrence of a substring in a string. It can also be used to determine whether a string contains another string. This function is case sensitive.",
+      "id": 816487436240564300000,
+      "term": "password hash",
+      "description": "Produce a password hash of a string in PHP.",
       "language": "PHP",
-      "snipRawCode": "$a = 'How are you?';\n\nif (strpos($a, 'are') !== false) {\n    echo 'true<br>';        // true\n    echo strpos($a, 'are'); // 4\n} else {\n\techo 'false';\n}",
-      "snipRawTags": "string in a string, string position, string contain another string",
-      "snipCode": [
-        "$a = 'How are you?';",
-        "",
-        "if (strpos($a, 'are') !== false) {",
-        "    echo 'true<br>';        // true",
-        "    echo strpos($a, 'are'); // 4",
-        "} else {",
-        "\techo 'false';",
-        "}"
-      ],
+      "snipRawCode": "$string = 'MyL33TpA$$w04D';\n$hashedPassword = password_hash($string, PASSWORD_BCRYPT);",
+      "snipRawTags": "password hashing",
       "snipTags": [
-        "string in a string",
-        " string position",
-        " string contain another string"
+        "password hashing"
+      ],
+      "snipCode": [
+        "$string = 'MyL33TpA$$w04D';",
+        "$hashedPassword = password_hash($string, PASSWORD_BCRYPT);"
       ]
     },
     {
-      "id": 177920431607942580000,
-      "term": "stripos",
-      "description": "Find the position of the first occurrence of a case-insensitive substring in a string. This can also be used to find whether a string IS in another string.",
+      "id": 908753811228805200000,
+      "term": "set cookie",
+      "description": "Set a cookie in PHP",
       "language": "PHP",
-      "snipRawCode": "$a = 'How are you?';\n\nif (stripos($a, 'ARE') !== false) {\n    echo 'true<br>';\n    echo strpos($a, 'are');\n} else {\n\techo 'false';\n}",
-      "snipRawTags": "string in a string (case insensitive), find string in a string",
+      "snipRawCode": "// \"KEY\" => the name of the cookie\n// 'VALUE' => the value of the cookie\n// time() => the expiration of the cookie in seconds (NOW + 60s*60m*24h*7 to get 7 days in seconds)\n// '/' => the path that the cookie is available to\n// NULL (#1) => domain\n// NULL (#2) => secure only? TRUE if you want it to be secure only\n// TRUE => HTTPonly? TRUE if you want to prevent scripting languages to be able to change the cookie\n//\n//\nsetcookie(\"KEY\", 'VALUE', time() + 60 * 60 * 24 * 7, '/', NULL, NULL, TRUE);",
+      "snipRawTags": "set cookie",
+      "snipCode": [
+        "// \"KEY\" => the name of the cookie",
+        "// 'VALUE' => the value of the cookie",
+        "// time() => the expiration of the cookie in seconds (NOW + 60s*60m*24h*7 to get 7 days in seconds)",
+        "// '/' => the path that the cookie is available to",
+        "// NULL (#1) => domain",
+        "// NULL (#2) => secure only? TRUE if you want it to be secure only",
+        "// TRUE => HTTPonly? TRUE if you want to prevent scripting languages to be able to change the cookie",
+        "//",
+        "//",
+        "setcookie(\"KEY\", 'VALUE', time() + 60 * 60 * 24 * 7, '/', NULL, NULL, TRUE);"
+      ],
       "snipTags": [
-        "string in a string (case insensitive)",
-        " find string in a string"
+        "set cookie"
+      ]
+    },
+    {
+      "id": 526487862448897300000,
+      "term": "delete a cookie",
+      "description": "Delete a cookie in PHP.",
+      "language": "PHP",
+      "snipRawCode": "// To delete a cookie, update its expiration to the past\nsetcookie(\"MyCookie\", \"\", time() - 10000, \"/\");",
+      "snipRawTags": "delete a cookie",
+      "snipTags": [
+        "delete a cookie"
       ],
       "snipCode": [
-        "$a = 'How are you?';",
-        "",
-        "if (stripos($a, 'ARE') !== false) {",
-        "    echo 'true<br>';",
-        "    echo strpos($a, 'are');",
-        "} else {",
-        "\techo 'false';",
+        "// To delete a cookie, update its expiration to the past",
+        "setcookie(\"MyCookie\", \"\", time() - 10000, \"/\");"
+      ]
+    },
+    {
+      "id": 4377556205258593000,
+      "term": "set session variables",
+      "description": "Set the session variables for a user",
+      "language": "PHP",
+      "snipRawCode": "// check if session currently exists; if not, start session\nif(session_id() == '' || !isset($_SESSION)) {\n    // session isn't started\n    session_start();\n}\n//\n// now that session exists, you can set anything you want\n$_SESSION['userID'] = 57;\n$_SESSION['admin'] = false;\n$_SESSION['random'] = rand();\n",
+      "snipRawTags": "set session variables, PHP sessions",
+      "snipTags": [
+        "set session variables",
+        " PHP sessions"
+      ],
+      "snipCode": [
+        "// check if session currently exists; if not, start session",
+        "if(session_id() == '' || !isset($_SESSION)) {",
+        "    // session isn't started",
+        "    session_start();",
+        "}",
+        "//",
+        "// now that session exists, you can set anything you want",
+        "$_SESSION['userID'] = 57;",
+        "$_SESSION['admin'] = false;",
+        "$_SESSION['random'] = rand();",
+        ""
+      ]
+    },
+    {
+      "id": 961965028127618400000,
+      "term": "timestamp",
+      "description": "Return a timestamp using PHP's datetime functionality",
+      "language": "PHP",
+      "snipRawCode": "// $time is a string and can be \"now\", \"-20 minutes\"\nfunction getTimestamp($time)\n{\n\tdate_default_timezone_set('America/New_York');\n\t$timestamp = date( 'Y-m-d H:i:s', strtotime($time));\n\treturn $timestamp;\n}",
+      "snipRawTags": "timestamp",
+      "snipTags": [
+        "timestamp"
+      ],
+      "snipCode": [
+        "// $time is a string and can be \"now\", \"-20 minutes\"",
+        "function getTimestamp($time)",
+        "{",
+        "\tdate_default_timezone_set('America/New_York');",
+        "\t$timestamp = date( 'Y-m-d H:i:s', strtotime($time));",
+        "\treturn $timestamp;",
         "}"
+      ]
+    },
+    {
+      "id": 232948408070305700000,
+      "term": "delete session",
+      "description": "Delete or destroy PHP session.",
+      "language": "PHP",
+      "snipRawCode": "// not much to it; less involved than cookies\nsession_destroy();",
+      "snipRawTags": "delete session, destroy session",
+      "snipTags": [
+        "delete session",
+        " destroy session"
+      ],
+      "snipCode": [
+        "// not much to it; less involved than cookies",
+        "session_destroy();"
+      ]
+    },
+    {
+      "id": 22396491140449726000,
+      "term": "reverse a string",
+      "description": "Reverse a string in PHP. This does NOT alter the string itself.",
+      "language": "PHP",
+      "snipRawCode": "$string = 'hello';\necho strrev($string); // olleh\necho $string;         // hello => no change to string",
+      "snipRawTags": "reverse a string",
+      "snipTags": [
+        "reverse a string"
+      ],
+      "snipCode": [
+        "$string = 'hello';",
+        "echo strrev($string); // olleh",
+        "echo $string;         // hello => no change to string"
+      ]
+    },
+    {
+      "id": 427982054207748830000,
+      "term": "length of a string",
+      "description": "Get the length of a string in PHP.",
+      "language": "PHP",
+      "snipRawCode": "$length = strlen('hello');\necho $length; // 5",
+      "snipRawTags": "length of string",
+      "snipTags": [
+        "length of string"
+      ],
+      "snipCode": [
+        "$length = strlen('hello');",
+        "echo $length; // 5"
       ]
     }
   ]

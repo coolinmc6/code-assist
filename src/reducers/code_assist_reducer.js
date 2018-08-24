@@ -44,19 +44,25 @@ export default function(state = defaultJSNotes, action) {
 				};
 			} else {
 				const keywords = [];
+				const list = [];
 				state.library.map(parent => {
+					if(parent.term.toLowerCase().includes(action.payload.toLowerCase())) {
+						let obj2 = {id: parent.id, term: parent.term, language: parent.language}
+						list.push(obj2);
+					}
 					return parent.snipTags.map(tag => {
 						if(tag.toLowerCase().includes(action.payload.toLowerCase())) {
-							var obj = {id: parent.id, tag: tag}
+							var obj = {id: parent.id, tag: tag, language: parent.language}
 							keywords.push(obj)		
 						}
-						
 					});
 				});
+				
 				const obj = {
 					...state,
 					keywords: keywords.slice(0,5),
-					list: state.library.filter(obj => obj.term.toLowerCase().includes(action.payload.toLowerCase()) && obj.term.toLowerCase() !== "template").slice(0,5), 
+					// list: state.library.filter(obj => obj.term.toLowerCase().includes(action.payload.toLowerCase()) && obj.term.toLowerCase() !== "template").slice(0,5), 
+					list: list.slice(0,5),
 					search: action.payload 
 				}
 				return obj;	

@@ -223,13 +223,18 @@ nav {
 			&:hover {
 				background-color: #f7f7f7;
 			}
+
+			.list-lang {
+				position: relative;
+				bottom: 3px;
+			}
 		}
 	}
 	.concept-page {
 		position: relative;
 		// border: 1px solid black;
 		border-radius: 2px;
-		padding: 1rem;
+		padding: 1rem 0rem;
 		.close {
 			position: absolute;
 			top: 0.5rem;
@@ -277,11 +282,6 @@ nav {
 	}
 }
 
-
-// .container {
-// 	background-color: blue;;
-// }
-
 @media screen and (min-width: 600px) {
 	.js-helper-main {
 		input.search {
@@ -302,7 +302,9 @@ nav {
 		}
 
 		.concept-page {
-
+			.term-definition {
+				font-size: 1.2rem;
+			}
 
 			.code-examples {
 

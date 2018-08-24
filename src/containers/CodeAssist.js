@@ -88,7 +88,10 @@ class JSHelper extends Component {
 		// }
 		return this.props.code_blocks.list.map((item) =>  {
 			const regex = new RegExp(this.props.code_blocks.search, 'gi');
-			const final = item.term.replace(regex, `<span class="special">${this.props.code_blocks.search}</span>`)
+			const language = 'cm-' + languageIdentifier(item.language);
+			const langSpan = `<span class="list-lang ${language}">${item.language}</span>`;
+			const final = item.term.replace(regex, `<span class="special">${this.props.code_blocks.search}</span>`) + langSpan;
+
 			const rand = Math.floor(Math.random()*1000000)
 			return (
 				<div dangerouslySetInnerHTML={{__html: final}} 
@@ -111,7 +114,11 @@ class JSHelper extends Component {
 		// }
 		return this.props.code_blocks.keywords.map(item => {
 			const regex = new RegExp(this.props.code_blocks.search, 'gi');
-			const final = item.tag.replace(regex, `<span class="special">${this.props.code_blocks.search}</span>`);
+			const language = 'cm-' + languageIdentifier(item.language);
+			const langSpan = `<span class="list-lang ${language}">${item.language}</span>`;
+
+			const final = item.tag.replace(regex, `<span class="special">${this.props.code_blocks.search}</span>`) + langSpan;
+
 			const rand = Math.floor(Math.random()*1000000)
 			return (
 				<div className="search-result" key={rand} 

@@ -1,5 +1,6 @@
 export const generateID = () => Math.floor(Math.random()*1000000000000000000000);
 
+// given a text version of a language, return what the language is
 export const languageIdentifier = (language) => {
 	let identifiedLanguage;
 	switch(language) {

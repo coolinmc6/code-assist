@@ -115,10 +115,14 @@ nav {
 .js-helper-main .results .search-result:hover {
   background-color: #f7f7f7; }
 
+.js-helper-main .results .search-result .list-lang {
+  position: relative;
+  bottom: 3px; }
+
 .js-helper-main .concept-page {
   position: relative;
   border-radius: 2px;
-  padding: 1rem; }
+  padding: 1rem 0rem; }
 
 .js-helper-main .concept-page .close {
   position: absolute;
@@ -157,23 +161,16 @@ nav {
   font-size: 0.8rem; }
 
 @media screen and (min-width: 600px) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/master
   .js-helper-main input.search {
     font-size: 1.4rem; }
   .js-helper-main .results div {
     font-size: 1.3rem; }
-<<<<<<< HEAD
->>>>>>> origin/master
-=======
->>>>>>> origin/master
   .js-helper-main .results .search-result {
     font-size: 1.4rem; }
   .js-helper-main .results .search-result:hover {
     background-color: #f7f7f7; }
+  .js-helper-main .concept-page .term-definition {
+    font-size: 1.2rem; }
   .js-helper-main .concept-page .code-examples .code-block {
     padding: 1rem 3rem; }
   .js-helper-main .concept-page .code-examples .code-block code {
