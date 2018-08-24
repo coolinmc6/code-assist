@@ -214,6 +214,7 @@ nav {
 	// .code-examples > .code-block 
 	.results {
 		padding-top: 1.5rem;
+		max-width: 95%;
 		.search-result {
 			border-bottom: 1px solid #eee;
 			padding: 0.15rem;
@@ -283,11 +284,20 @@ nav {
 
 @media screen and (min-width: 600px) {
 	.js-helper-main {
-		font-size: 40px;
+<<<<<<< HEAD
+		// font-size: 40px;
 
+=======
+		
+		input.search {
+			font-size: 1.4rem;
+		}
+>>>>>>> origin/master
 
 		.results {
-			
+			div {
+				font-size: 1.3rem;
+			}
 			.search-result {
 				font-size: 1.4rem;
 				&:hover {
@@ -341,6 +351,19 @@ nav {
 	border: 1px solid #ddd;
 	border-radius: 2px;
 	// overflow: hidden;
+	
+	.language-count-parent {
+		text-align: center;
+		padding: 0.5rem 0.2rem;
+		.language-count {
+			display: inline-block;
+			width: 48%;
+		    padding: 0.4rem;
+		    border-radius: 5px;
+		    margin: 0.1rem;
+		    text-transform: uppercase;
+		}
+	}
 	
 	.collection {
 		margin-top: 0px;

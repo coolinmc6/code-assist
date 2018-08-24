@@ -103,7 +103,8 @@ nav {
   padding-left: 1.7rem; }
 
 .js-helper-main .results {
-  padding-top: 1.5rem; }
+  padding-top: 1.5rem;
+  max-width: 95%; }
 
 .js-helper-main .results .search-result {
   border-bottom: 1px solid #eee;
@@ -156,8 +157,13 @@ nav {
   font-size: 0.8rem; }
 
 @media screen and (min-width: 600px) {
-  .js-helper-main {
-    font-size: 40px; }
+<<<<<<< HEAD
+=======
+  .js-helper-main input.search {
+    font-size: 1.4rem; }
+  .js-helper-main .results div {
+    font-size: 1.3rem; }
+>>>>>>> origin/master
   .js-helper-main .results .search-result {
     font-size: 1.4rem; }
   .js-helper-main .results .search-result:hover {
@@ -185,6 +191,18 @@ nav {
   padding: 0 !important;
   border: 1px solid #ddd;
   border-radius: 2px; }
+
+.main-collection .language-count-parent {
+  text-align: center;
+  padding: 0.5rem 0.2rem; }
+
+.main-collection .language-count-parent .language-count {
+  display: inline-block;
+  width: 48%;
+  padding: 0.4rem;
+  border-radius: 5px;
+  margin: 0.1rem;
+  text-transform: uppercase; }
 
 .main-collection .collection {
   margin-top: 0px; }
