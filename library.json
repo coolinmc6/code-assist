@@ -1261,6 +1261,144 @@
         "    // email is bad",
         "  }"
       ]
+    },
+    {
+      "id": 19927325028634700000,
+      "term": "Bootstrap Alerts",
+      "description": "The most popular Bootstrap alert stylings",
+      "language": "CSS",
+      "snipRawCode": "// alert container => rounded corners full width, moderate padding\n.alert {\n    position: relative;\n    padding: .75rem 1.25rem;\n    margin-bottom: 1rem;\n    border: 1px solid transparent;\n    border-radius: .25rem;\n}\n\n// green\n.alert-success {\n    color: #155724;\n    background-color: #d4edda;\n    border-color: #c3e6cb;\n}\n\n// red\n.alert-danger {\n    color: #721c24;\n    background-color: #f8d7da;\n    border-color: #f5c6cb;\n}\n\n// yellow\n.alert-warning {\n    color: #856404;\n    background-color: #fff3cd;\n    border-color: #ffeeba;\n}\n\n// blue\n.alert-primary {\n    color: #004085;\n    background-color: #cce5ff;\n    border-color: #b8daff;\n}\n\n// \"blue lagoon\"\n.alert-info {\n    color: #0c5460;\n    background-color: #d1ecf1;\n    border-color: #bee5eb;\n}",
+      "snipRawTags": "bootstrap alerts, bootstrap styles",
+      "snipTags": [
+        "bootstrap alerts",
+        " bootstrap styles"
+      ],
+      "snipCode": [
+        "// alert container => rounded corners full width, moderate padding",
+        ".alert {",
+        "    position: relative;",
+        "    padding: .75rem 1.25rem;",
+        "    margin-bottom: 1rem;",
+        "    border: 1px solid transparent;",
+        "    border-radius: .25rem;",
+        "}",
+        "",
+        "// green",
+        ".alert-success {",
+        "    color: #155724;",
+        "    background-color: #d4edda;",
+        "    border-color: #c3e6cb;",
+        "}",
+        "",
+        "// red",
+        ".alert-danger {",
+        "    color: #721c24;",
+        "    background-color: #f8d7da;",
+        "    border-color: #f5c6cb;",
+        "}",
+        "",
+        "// yellow",
+        ".alert-warning {",
+        "    color: #856404;",
+        "    background-color: #fff3cd;",
+        "    border-color: #ffeeba;",
+        "}",
+        "",
+        "// blue",
+        ".alert-primary {",
+        "    color: #004085;",
+        "    background-color: #cce5ff;",
+        "    border-color: #b8daff;",
+        "}",
+        "",
+        "// \"blue lagoon\"",
+        ".alert-info {",
+        "    color: #0c5460;",
+        "    background-color: #d1ecf1;",
+        "    border-color: #bee5eb;",
+        "}"
+      ]
+    },
+    {
+      "id": 958425167217265700000,
+      "term": "Refresh page",
+      "description": "Refresh the page with JavaScript.",
+      "language": "JavaScript",
+      "snipRawCode": "location.reload();",
+      "snipRawTags": "page refresh",
+      "snipTags": [
+        "page refresh"
+      ],
+      "snipCode": [
+        "location.reload();"
+      ]
+    },
+    {
+      "id": 258088730290033900000,
+      "term": "validate email",
+      "description": "Validate email in PHP",
+      "language": "PHP",
+      "snipRawCode": "$email = \"john.doe@example.com\";\n\nif (filter_var($email, FILTER_VALIDATE_EMAIL)) {\n  echo(\"$email is a valid email address\");\n} else {\n  echo(\"$email is not a valid email address\");\n}",
+      "snipRawTags": "validate email",
+      "snipTags": [
+        "validate email"
+      ],
+      "snipCode": [
+        "$email = \"john.doe@example.com\";",
+        "",
+        "if (filter_var($email, FILTER_VALIDATE_EMAIL)) {",
+        "  echo(\"$email is a valid email address\");",
+        "} else {",
+        "  echo(\"$email is not a valid email address\");",
+        "}"
+      ]
+    },
+    {
+      "id": 963715357190918100000,
+      "term": "Create URL slug from post title",
+      "description": "This is just a regular expression function that replaces the spaces between words with hyphens.",
+      "language": "PHP",
+      "snipRawCode": "function create_slug($string){\n   $slug=preg_replace('/[^A-Za-z0-9-]+/', '-', $string);\n   return $slug;\n}\necho create_slug('does this thing work or not');",
+      "snipRawTags": "php url slug",
+      "snipTags": [
+        "php url slug"
+      ],
+      "snipCode": [
+        "function create_slug($string){",
+        "   $slug=preg_replace('/[^A-Za-z0-9-]+/', '-', $string);",
+        "   return $slug;",
+        "}",
+        "echo create_slug('does this thing work or not');"
+      ]
+    },
+    {
+      "id": 960165641046487900000,
+      "term": "Convert HEX to RGB",
+      "description": "Converts a hex (#F7F7F7 or F7F7F7 or FFF) to RGB array.",
+      "language": "PHP",
+      "snipRawCode": "function hex2rgb( $colour ) {\n        if ( $colour[0] == '#' ) {\n                $colour = substr( $colour, 1 );\n        }\n        if ( strlen( $colour ) == 6 ) {\n                list( $r, $g, $b ) = array( $colour[0] . $colour[1], $colour[2] . $colour[3], $colour[4] . $colour[5] );\n        } elseif ( strlen( $colour ) == 3 ) {\n                list( $r, $g, $b ) = array( $colour[0] . $colour[0], $colour[1] . $colour[1], $colour[2] . $colour[2] );\n        } else {\n                return false;\n        }\n        $r = hexdec( $r );\n        $g = hexdec( $g );\n        $b = hexdec( $b );\n        return array( 'red' => $r, 'green' => $g, 'blue' => $b );\n}",
+      "snipRawTags": "hex to rgb",
+      "snipTags": [
+        "hex to rgb"
+      ],
+      "snipCode": [
+        "function hex2rgb( $colour ) {",
+        "        if ( $colour[0] == '#' ) {",
+        "                $colour = substr( $colour, 1 );",
+        "        }",
+        "        if ( strlen( $colour ) == 6 ) {",
+        "                list( $r, $g, $b ) = array( $colour[0] . $colour[1], $colour[2] . $colour[3], $colour[4] . $colour[5] );",
+        "        } elseif ( strlen( $colour ) == 3 ) {",
+        "                list( $r, $g, $b ) = array( $colour[0] . $colour[0], $colour[1] . $colour[1], $colour[2] . $colour[2] );",
+        "        } else {",
+        "                return false;",
+        "        }",
+        "        $r = hexdec( $r );",
+        "        $g = hexdec( $g );",
+        "        $b = hexdec( $b );",
+        "        return array( 'red' => $r, 'green' => $g, 'blue' => $b );",
+        "}"
+      ]
     }
   ]
 }
