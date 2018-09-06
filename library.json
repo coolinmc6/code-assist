@@ -103,13 +103,17 @@
     },
     {
       "id": 7,
-      "term": "sort",
-      "description": "",
+      "term": "sort by object property",
+      "description": "Sort an array of objects by a common property on each object.",
       "language": "JavaScript",
-      "snipRawCode": "",
-      "snipRawTags": "",
-      "snipCode": [],
-      "snipTags": []
+      "snipRawCode": "let cards = array.sort((a,b) => a.customOrder - b.customOrder);",
+      "snipRawTags": "sort by property",
+      "snipCode": [
+        "let cards = array.sort((a,b) => a.customOrder - b.customOrder);"
+      ],
+      "snipTags": [
+        "sort by property"
+      ]
     },
     {
       "id": 8,
@@ -1267,14 +1271,10 @@
       "term": "Bootstrap Alerts",
       "description": "The most popular Bootstrap alert stylings",
       "language": "CSS",
-      "snipRawCode": "// alert container => rounded corners full width, moderate padding\n.alert {\n    position: relative;\n    padding: .75rem 1.25rem;\n    margin-bottom: 1rem;\n    border: 1px solid transparent;\n    border-radius: .25rem;\n}\n\n// green\n.alert-success {\n    color: #155724;\n    background-color: #d4edda;\n    border-color: #c3e6cb;\n}\n\n// red\n.alert-danger {\n    color: #721c24;\n    background-color: #f8d7da;\n    border-color: #f5c6cb;\n}\n\n// yellow\n.alert-warning {\n    color: #856404;\n    background-color: #fff3cd;\n    border-color: #ffeeba;\n}\n\n// blue\n.alert-primary {\n    color: #004085;\n    background-color: #cce5ff;\n    border-color: #b8daff;\n}\n\n// \"blue lagoon\"\n.alert-info {\n    color: #0c5460;\n    background-color: #d1ecf1;\n    border-color: #bee5eb;\n}",
+      "snipRawCode": "/* alert container => rounded corners full width, moderate padding */\n.alert {\n    position: relative;\n    padding: .75rem 1.25rem;\n    margin-bottom: 1rem;\n    border: 1px solid transparent;\n    border-radius: .25rem;\n}\n\n/* green */\n.alert-success {\n    color: #155724;\n    background-color: #d4edda;\n    border-color: #c3e6cb;\n}\n\n/* red */\n.alert-danger {\n    color: #721c24;\n    background-color: #f8d7da;\n    border-color: #f5c6cb;\n}\n\n/* yellow */\n.alert-warning {\n    color: #856404;\n    background-color: #fff3cd;\n    border-color: #ffeeba;\n}\n\n/* blue */\n.alert-primary {\n    color: #004085;\n    background-color: #cce5ff;\n    border-color: #b8daff;\n}\n\n/* \"blue lagoon\" */\n.alert-info {\n    color: #0c5460;\n    background-color: #d1ecf1;\n    border-color: #bee5eb;\n}",
       "snipRawTags": "bootstrap alerts, bootstrap styles",
-      "snipTags": [
-        "bootstrap alerts",
-        " bootstrap styles"
-      ],
       "snipCode": [
-        "// alert container => rounded corners full width, moderate padding",
+        "/* alert container => rounded corners full width, moderate padding */",
         ".alert {",
         "    position: relative;",
         "    padding: .75rem 1.25rem;",
@@ -1283,40 +1283,44 @@
         "    border-radius: .25rem;",
         "}",
         "",
-        "// green",
+        "/* green */",
         ".alert-success {",
         "    color: #155724;",
         "    background-color: #d4edda;",
         "    border-color: #c3e6cb;",
         "}",
         "",
-        "// red",
+        "/* red */",
         ".alert-danger {",
         "    color: #721c24;",
         "    background-color: #f8d7da;",
         "    border-color: #f5c6cb;",
         "}",
         "",
-        "// yellow",
+        "/* yellow */",
         ".alert-warning {",
         "    color: #856404;",
         "    background-color: #fff3cd;",
         "    border-color: #ffeeba;",
         "}",
         "",
-        "// blue",
+        "/* blue */",
         ".alert-primary {",
         "    color: #004085;",
         "    background-color: #cce5ff;",
         "    border-color: #b8daff;",
         "}",
         "",
-        "// \"blue lagoon\"",
+        "/* \"blue lagoon\" */",
         ".alert-info {",
         "    color: #0c5460;",
         "    background-color: #d1ecf1;",
         "    border-color: #bee5eb;",
         "}"
+      ],
+      "snipTags": [
+        "bootstrap alerts",
+        " bootstrap styles"
       ]
     },
     {
@@ -1398,6 +1402,77 @@
         "        $b = hexdec( $b );",
         "        return array( 'red' => $r, 'green' => $g, 'blue' => $b );",
         "}"
+      ]
+    },
+    {
+      "id": 45168731284003450000,
+      "term": "create HTML element w/jQuery",
+      "description": "This function returns an HTML element. It requires jQuery so make sure you have included it before you use this function.",
+      "language": "JavaScript",
+      "snipRawCode": "// tag => STRING => HTML element: div, p, em, strong, etc.\n// classes => STRING => multiple classes broken up by a space (i.e. \"btn btn-primary\")\n// text => STRING => the text in the element\n// attributes => OBJECT => all other attributes you want to add:\n//     { type: 'text', 'data-id': 5 }\nfunction makeHTMLElement(tag, classes, text, attributes) {\t\n\t\tvar d = document.createElement(tag);\n\t\t$(d).addClass(classes);\n\t\t$(d).append(text);\n\t\tfor(var prop in attributes) {\n\t\t\t$(d).attr(prop, attributes[prop]);\n\t\t}\n\t\treturn d;\n\t}",
+      "snipRawTags": "makeHTMLElement(), build HTML element",
+      "snipTags": [
+        "makeHTMLElement()",
+        " build HTML element"
+      ],
+      "snipCode": [
+        "// tag => STRING => HTML element: div, p, em, strong, etc.",
+        "// classes => STRING => multiple classes broken up by a space (i.e. \"btn btn-primary\")",
+        "// text => STRING => the text in the element",
+        "// attributes => OBJECT => all other attributes you want to add:",
+        "//     { type: 'text', 'data-id': 5 }",
+        "function makeHTMLElement(tag, classes, text, attributes) {\t",
+        "\t\tvar d = document.createElement(tag);",
+        "\t\t$(d).addClass(classes);",
+        "\t\t$(d).append(text);",
+        "\t\tfor(var prop in attributes) {",
+        "\t\t\t$(d).attr(prop, attributes[prop]);",
+        "\t\t}",
+        "\t\treturn d;",
+        "\t}"
+      ]
+    },
+    {
+      "id": 334789259838266930000,
+      "term": "Escape HTML characters",
+      "description": "",
+      "language": "JavaScript",
+      "snipRawCode": "function escapeHtml(unsafe) {\n  if(unsafe == null) {\n    return null;\n  }\n  return unsafe\n\t.replace(/&/g, \"&amp;\")\n\t.replace(/</g, \"&lt;\")\n\t.replace(/>/g, \"&gt;\")\n\t.replace(/\"/g, \"&quot;\")\n\t.replace(/'/g, \"&#039;\");\n}",
+      "snipRawTags": "escape characters",
+      "snipTags": [
+        "escape characters"
+      ],
+      "snipCode": [
+        "function escapeHtml(unsafe) {",
+        "  if(unsafe == null) {",
+        "    return null;",
+        "  }",
+        "  return unsafe",
+        "\t.replace(/&/g, \"&amp;\")",
+        "\t.replace(/</g, \"&lt;\")",
+        "\t.replace(/>/g, \"&gt;\")",
+        "\t.replace(/\"/g, \"&quot;\")",
+        "\t.replace(/'/g, \"&#039;\");",
+        "}"
+      ]
+    },
+    {
+      "id": 718876318098745900000,
+      "term": "remove value from array",
+      "description": "Remove a particular value from an array. This is a two-step process: find the index of the value you are looking for, splice that item.",
+      "language": "JavaScript",
+      "snipRawCode": "// get the index of item in the array\nlet index = array.indexOf(value);\narray.splice(index, 1)\n\n// if you don't know that the value is in the array\nidx > -1 && array.splice(index, 1)",
+      "snipRawTags": "remove value from array",
+      "snipTags": [
+        "remove value from array"
+      ],
+      "snipCode": [
+        "// get the index of item in the array",
+        "let index = array.indexOf(value);",
+        "array.splice(index, 1)",
+        "",
+        "// if you don't know that the value is in the array",
+        "idx > -1 && array.splice(index, 1)"
       ]
     }
   ]
