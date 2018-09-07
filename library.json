@@ -2045,6 +2045,34 @@
         "  /* Styles */",
         "}"
       ]
+    },
+    {
+      "id": 328759976731939400000,
+      "term": "CSS Animation - Simple",
+      "description": "",
+      "language": "CSS",
+      "snipRawCode": "/* Define animation */\n@keyframes pulse {\n  0%, 100% {\n    background-color: yellow;\n  }\n  50% {\n    background-color: red;\n  }\n}\n/* assign to element */\n.box {\n\theight: 100px;\n\twidth: 100px;\n\tanimation: pulse 4s infinite linear;\n}",
+      "snipRawTags": "css animation",
+      "snipTags": [
+        "css animation"
+      ],
+      "snipCode": [
+        "/* Define animation */",
+        "@keyframes pulse {",
+        "  0%, 100% {",
+        "    background-color: yellow;",
+        "  }",
+        "  50% {",
+        "    background-color: red;",
+        "  }",
+        "}",
+        "/* assign to element */",
+        ".box {",
+        "\theight: 100px;",
+        "\twidth: 100px;",
+        "\tanimation: pulse 4s infinite linear;",
+        "}"
+      ]
     }
   ]
 }
