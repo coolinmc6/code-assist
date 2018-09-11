@@ -27,7 +27,8 @@ class JSHelper extends Component {
 		let language = codeBlock.language ? languageIdentifier(codeBlock.language) : 'javascript';
 		let prism = prismLanguage(language);
 		return codeBlock.snipCode.map((line) => {
-			const html = Prism.highlight(line, Prism.languages[prism]);
+			let text = line == "" ? " " : line;
+			const html = Prism.highlight(text, Prism.languages[prism]);
 			return (
 				<div key={Math.floor(Math.random()*10000000)}
 					dangerouslySetInnerHTML={this.createMarkup(html)}></div>
