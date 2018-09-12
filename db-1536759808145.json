@@ -1811,8 +1811,12 @@
       "term": "Bubble Sort",
       "description": "Simple Bubble Sort algorithm",
       "language": "JavaScript",
-      "snipRawCode": "function bubbleSort(arr) {\n\t// implement bubblesort\n\tfor(let i = 0; i < arr.length; i++) {\n\t\tfor(let j = 0; j < (arr.length - i - 1); j++) {\n\t\t\tif(arr[j] > arr[j+1]) {\n\t\t\t\tconst lesser = arr[j+1];\n\t\t\t\tarr[j+1] = arr[j];\n\t\t\t\tarr[j] = lesser;\n\t\t\t}\n\t\t}\n\t}\n\n\t// return the sorted array\n\treturn arr;\n}",
+      "snipRawCode": "function bubbleSort(arr) {\n\t// implement bubblesort\n\tfor(let i = 0; i < arr.length; i++) {\n\t\tfor(let j = 0; j < (arr.length - i - 1); j++) {\n\t\t\tif(arr[j] > arr[j+1]) {\n\t\t\t\tconst lesser = arr[j+1];\n\t\t\t\tarr[j+1] = arr[j];\n\t\t\t\tarr[j] = lesser;\n\t\t\t}\n\t\t}\n\t}\n\n\n\n\t// return the sorted array\n\treturn arr;\n}",
       "snipRawTags": "sorting, bubble sort",
+      "snipTags": [
+        "sorting",
+        " bubble sort"
+      ],
       "snipCode": [
         "function bubbleSort(arr) {",
         "\t// implement bubblesort",
@@ -1826,13 +1830,11 @@
         "\t\t}",
         "\t}",
         "",
+        "",
+        "",
         "\t// return the sorted array",
         "\treturn arr;",
         "}"
-      ],
-      "snipTags": [
-        "sorting",
-        " bubble sort"
       ]
     },
     {
