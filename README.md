@@ -59,9 +59,9 @@ And now you are all set! Code Assist comes with a small library of snippets that
 - There are only two pages: the **Code Assist** main page with the working application and the **Code Editor** that allows you to edit your snippets. Here are their routes:
 
 |Page|Route|
-|:---:|:---:|
-|**Code Assist**|http://localhost:3000/**code-assist/**|
-|**Code Editor**|http://localhost:3000/**code-assist/code-editor**| 
+|:---:|:---|
+|**Code Assist**|http://localhost:3000/code-assist/|
+|**Code Editor**|http://localhost:3000/code-assist/code-editor| 
 
 - Each route has the */code-assist/* preface so that you can deploy the app to GH-Pages and actually gain access to your snippets on the web. For more information on how deploy a create-react-app to GH-Pages, take a look at the [create-react-app README](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#github-pages).
 
