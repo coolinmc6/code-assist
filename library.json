@@ -6,7 +6,7 @@
       "description": "The map() method creates a new array with the results of calling a provided function on every element in the calling array.",
       "language": "JavaScript",
       "snipRawCode": "// basic example #1\nconst arr = [1,2,3,4,5]\nconst doubled = arr.map(num => num * 2); // [2, 4, 6, 8, 10]\n\n",
-      "snipRawTags": "basic map example",
+      "snipRawTags": "basic map example,map",
       "snipCode": [
         "// basic example #1",
         "const arr = [1,2,3,4,5]",
@@ -15,7 +15,8 @@
         ""
       ],
       "snipTags": [
-        "basic map example"
+        "basic map example",
+        "map"
       ]
     },
     {
@@ -806,7 +807,7 @@
       "description": "",
       "language": "JavaScript",
       "snipRawCode": "// One Argument does NOT need parens around the num after the equals\nconst double = num => num * 2;\n\n// Zero Arguments DOES need parens around the empty string\nconst triple = () => 3;\n\n// Two+ Arguments NEED parens\nconst quadru = (num1, num2) => num1 * num2;\n\nconst numbers = [1,2,3];\n\n// Slimmed down Map function with One Argument\nnumbers.map(num => num * 2);",
-      "snipRawTags": "basic arrow function examples",
+      "snipRawTags": "basic arrow function examples, arrow function",
       "snipCode": [
         "// One Argument does NOT need parens around the num after the equals",
         "const double = num => num * 2;",
@@ -823,7 +824,8 @@
         "numbers.map(num => num * 2);"
       ],
       "snipTags": [
-        "basic arrow function examples"
+        "basic arrow function examples",
+        " arrow function"
       ]
     },
     {
@@ -1344,7 +1346,7 @@
       "description": "The most popular Bootstrap alert stylings",
       "language": "CSS",
       "snipRawCode": "/* alert container => rounded corners full width, moderate padding */\n.alert {\n    position: relative;\n    padding: .75rem 1.25rem;\n    margin-bottom: 1rem;\n    border: 1px solid transparent;\n    border-radius: .25rem;\n}\n\n/* green */\n.alert-success {\n    color: #155724;\n    background-color: #d4edda;\n    border-color: #c3e6cb;\n}\n\n/* red */\n.alert-danger {\n    color: #721c24;\n    background-color: #f8d7da;\n    border-color: #f5c6cb;\n}\n\n/* yellow */\n.alert-warning {\n    color: #856404;\n    background-color: #fff3cd;\n    border-color: #ffeeba;\n}\n\n/* blue */\n.alert-primary {\n    color: #004085;\n    background-color: #cce5ff;\n    border-color: #b8daff;\n}\n\n/* \"blue lagoon\" */\n.alert-info {\n    color: #0c5460;\n    background-color: #d1ecf1;\n    border-color: #bee5eb;\n}",
-      "snipRawTags": "bootstrap alerts, bootstrap styles",
+      "snipRawTags": "bootstrap alerts,bootstrap styles,bootstrap",
       "snipCode": [
         "/* alert container => rounded corners full width, moderate padding */",
         ".alert {",
@@ -1392,7 +1394,8 @@
       ],
       "snipTags": [
         "bootstrap alerts",
-        " bootstrap styles"
+        "bootstrap styles",
+        "bootstrap"
       ]
     },
     {
@@ -1549,11 +1552,11 @@
     },
     {
       "id": 353121007069291400000,
-      "term": "Stack structure",
+      "term": "Stack Data Structure",
       "description": "This a stack data structure. The stack\nshould be a class with methods 'push', 'pop', and 'peek'.  Adding an element to the stack should store it until it is removed.",
       "language": "JavaScript",
       "snipRawCode": "// --- Examples\n//   const s = new Stack();\n//   s.push(1);\n//   s.push(2);\n//   s.pop(); // returns 2\n//   s.pop(); // returns 1\n\nclass Stack {\n\n\tconstructor() {\n\t\tthis.data = [];\n\t}\n\n\tpush(record) {\n\t\tthis.data.unshift(record);\n\t}\n\n\tpop() {\n\t\treturn this.data.shift();\n\t}\n\n\tpeek() {\n\t\treturn this.data[0];\n\t}\n}",
-      "snipRawTags": "stack, JavaScript Class, data structure",
+      "snipRawTags": "stack,JavaScript Class,data structure",
       "snipCode": [
         "// --- Examples",
         "//   const s = new Stack();",
@@ -1583,8 +1586,8 @@
       ],
       "snipTags": [
         "stack",
-        " JavaScript Class",
-        " data structure"
+        "JavaScript Class",
+        "data structure"
       ]
     },
     {
@@ -1593,11 +1596,7 @@
       "description": "Print out the n-th entry in the fibonacci series. The fibonacci series is an ordering of numbers where each number is the sum of the preceding two. For example, the sequence [0, 1, 1, 2, 3, 5, 8, 13, 21, 34] forms the first ten entries of the fibonacci series.",
       "language": "JavaScript",
       "snipRawCode": "// Example:\n//   fib(4) === 3\n\n//\n// Solution #1\nfunction fib(n) {\n\n\tvar series = [0,1]\n\tfor(let i = 2; i < n+1; i++) {\n\t\tif(i == 2) {\n\t\t\tseries.push(1)\n\t\t} else {\n\t\t\tseries.push(series[i-2] + series[i-1]);\n\t\t}\n\t}\n\treturn series[n];\n}\n//\n//\n// Solution #2 \nfunction fib(n) {\n\tconst result = [0,1];\n\n\tfor(let i = 2; i<=n; i++) {\n\t\tconst a = result[i -1];\n\t\tconst b = result[i - 2];\n\t\tresult.push(a+b);\n\t}\n\n\treturn result[n];\n}\n\n//\n//\n// Solution #3 with Recursion and Memoize\n//\n// Memoize\nfunction memoize(fn) {\n\tconst cache = {};\n\n\t// ... implies that you don't know how many arguments it will receive\n\treturn function(...args) {\n\t\tif(cache[args]) {\n\t\t\treturn cache[args];\n\t\t}\n\n\t\tconst result = fn.apply(this, args);\n\t\tcache[args] = result;\n\n\t\treturn result;\n\t}\n}\n\n//\n// Recursive \nfunction fib(n) {\n\tif(n < 2) {\n\t\treturn n;\n\t}\n\n\t// we want to make sure that we are calling the memoized function, not the slowFib version\n\treturn fib(n-1) + fib(n - 2);\n}\n\nfib = memoize(fib);",
-      "snipRawTags": "Fibonacci, Fibonacci with memoize and recursion",
-      "snipTags": [
-        "Fibonacci",
-        " Fibonacci with memoize and recursion"
-      ],
+      "snipRawTags": "Fibonacci,Fibonacci with memoize and recursion",
       "snipCode": [
         "// Example:",
         "//   fib(4) === 3",
@@ -1664,6 +1663,10 @@
         "}",
         "",
         "fib = memoize(fib);"
+      ],
+      "snipTags": [
+        "Fibonacci",
+        "Fibonacci with memoize and recursion"
       ]
     },
     {
@@ -2116,12 +2119,7 @@
       "description": "These are the tags to quickly add Bootstrap to a webpage.",
       "language": "HTML",
       "snipRawCode": "<!-- in the HEAD tag -->\n<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">\n\n<!-- Near bottom of BODY tag -->\n<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>\n<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>",
-      "snipRawTags": "Bootstrap script tags, Bootstrap link tag, Bootstrap HTML tags",
-      "snipTags": [
-        "Bootstrap script tags",
-        " Bootstrap link tag",
-        " Bootstrap HTML tags"
-      ],
+      "snipRawTags": "Bootstrap script tags,Bootstrap link tag,Bootstrap HTML tags",
       "snipCode": [
         "<!-- in the HEAD tag -->",
         "<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\">",
@@ -2130,6 +2128,11 @@
         "<script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>",
         "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js\" integrity=\"sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q\" crossorigin=\"anonymous\"></script>",
         "<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>"
+      ],
+      "snipTags": [
+        "Bootstrap script tags",
+        "Bootstrap link tag",
+        "Bootstrap HTML tags"
       ]
     },
     {
@@ -2138,12 +2141,7 @@
       "description": "Simple Bootstrap NavBar example",
       "language": "HTML",
       "snipRawCode": "<!-- nav is the parent element -->\n<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\n\t<!-- NavBar Brand Image\t -->\n\t<!-- For text, just replace the img tag with your text\t -->\n  <a class=\"navbar-brand\" href=\"#\">\n\t\t<img src=\"https://via.placeholder.com/150x150\" width=\"40\" height=\"40\" alt=\"\">\n\t</a>\n\t<!-- this is the button to expand/collapse menu for mobile\t -->\n  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n\n\t<!-- This holds the contents of the navbar\t-->\n  <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n\t\t<!-- This is a navbar list item; the \"mr-auto\" class keeps it on the left side\t\t -->\n    <ul class=\"navbar-nav mr-auto\">\n\t\t\t<!-- NavBar links are in a \"nav-item\"; the a-tags are all \"nav-link\" -->\n      <li class=\"nav-item active\">\n        <a class=\"nav-link\" href=\"#\">Home <span class=\"sr-only\">(current)</span></a>\n      </li>\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" href=\"#\">Blog</a>\n      </li>\n\t\t\t<li class=\"nav-item\">\n        <a class=\"nav-link\" href=\"#\">Account Settings</a>\n      </li>\n    </ul>\n\t\t\n\t\t<!-- \tWithout \"mr-auto\", these items sit on the right side\t -->\n\t\t<ul class=\"navbar-nav\">\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" href=\"#\">Logout</a>\n      </li>\n    </ul>\n\t\t\n  </div> <!-- end of .collapse.navbar-collapse div -->\n</nav>  <!-- end of nav -->",
-      "snipRawTags": "Bootstrap, Bootstrap navigation, Bootstrap navbar",
-      "snipTags": [
-        "Bootstrap",
-        " Bootstrap navigation",
-        " Bootstrap navbar"
-      ],
+      "snipRawTags": "Bootstrap,Bootstrap navigation,Bootstrap navbar",
       "snipCode": [
         "<!-- nav is the parent element -->",
         "<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">",
@@ -2182,6 +2180,11 @@
         "\t\t",
         "  </div> <!-- end of .collapse.navbar-collapse div -->",
         "</nav>  <!-- end of nav -->"
+      ],
+      "snipTags": [
+        "Bootstrap",
+        "Bootstrap navigation",
+        "Bootstrap navbar"
       ]
     },
     {
@@ -2190,11 +2193,7 @@
       "description": "Example Signup form using Bootstrap.",
       "language": "HTML",
       "snipRawCode": "\n<style>\n.sign-up-form {\n\tborder: 1px solid #ccc;\n\tpadding-top: 1rem;\n\tpadding-bottom: 1rem;\n\tborder-radius: 5px;\n}\n</style>\n<div class=\"container\">\n\t\n\t<div class=\"row\">\n\t\t\n\t\n\t<div class=\"col-12  col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 sign-up-form\">\n\t\t<h2 class=\"text-center\">Welcome to THE COMPANY</h2>\n\t\t<div class=\"form-group\">\n\t\t\t<label for=\"exampleInputEmail1\">Email address</label>\n\t\t\t<input type=\"email\" class=\"form-control\" id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\" placeholder=\"Enter email\">\n<!-- \t\t\t<small id=\"emailHelp\" class=\"form-text text-muted\">We'll never share your email with anyone else.</small> -->\n\t\t</div>\n\n\t\t<div class=\"form-group\">\n\t\t\t<label for=\"password1\">Password</label>\n\t\t\t<input type=\"password\" class=\"form-control\" id=\"password1\" placeholder=\"Your Password\">\n\t\t</div>\n\t\t\n\t\t<div class=\"form-group\">\n\t\t\t<label for=\"password2\">Confirm Password</label>\n\t\t\t<input type=\"password\" class=\"form-control\" id=\"password2\" placeholder=\"Confirm Password\">\n\t\t</div>\n\n\t\t<div class=\"form-check\">\n\t\t\t<p><a href=\"#\">Please read our Privacy Policy and Terms of Service</a></p>\n\t\t\t<input type=\"checkbox\" class=\"form-check-input\" id=\"exampleCheck1\">\n\t\t\t<label class=\"form-check-label\" for=\"exampleCheck1\">I agree to THE COMPANY's Privacy Policy and Terms of Service</label>\n\t\t</div>\n\t\t<div class=\"alert alert-danger\">Sorry - your passwords do not match, email is already being used, username is taken</div>\n\t\t\n\t\t<div class=\"text-center\">\n\t\t\t<button class=\"btn btn-primary\">Sign Up</button>\t\n\t\t</div>\n\t\t\n\t\t\n\t\t\n\t\t</div>\n\t\t</div>\n</div>",
-      "snipRawTags": "Bootstrap, Bootstrap sign-up",
-      "snipTags": [
-        "Bootstrap",
-        " Bootstrap sign-up"
-      ],
+      "snipRawTags": "Bootstrap,Bootstrap sign-up",
       "snipCode": [
         "",
         "<style>",
@@ -2244,6 +2243,10 @@
         "\t\t</div>",
         "\t\t</div>",
         "</div>"
+      ],
+      "snipTags": [
+        "Bootstrap",
+        "Bootstrap sign-up"
       ]
     },
     {
@@ -2268,6 +2271,24 @@
         "\treturn simple;\t\t// Example: 2018-05-09",
         "\treturn final;\t\t// Example: Sept 09, 2018\t\t\t\t\t\t",
         "}\t"
+      ]
+    },
+    {
+      "id": 929051971331090300000,
+      "term": "Flatten Array of Arrays",
+      "description": "Example #1 is a great example of peeling off the array from a list of objects and putting them all into one big array",
+      "language": "JavaScript",
+      "snipRawCode": "//===================================\n// Example #1\n// Use reduce to flatten an array of objects (with an array in each) \n// into one big array\nlet uniqueTags = array.reduce((acc, val) => acc.concat(val.snipTags), []);",
+      "snipRawTags": "flatten array with reduce",
+      "snipTags": [
+        "flatten array with reduce"
+      ],
+      "snipCode": [
+        "//===================================",
+        "// Example #1",
+        "// Use reduce to flatten an array of objects (with an array in each) ",
+        "// into one big array",
+        "let uniqueTags = array.reduce((acc, val) => acc.concat(val.snipTags), []);"
       ]
     }
   ]

@@ -12,7 +12,8 @@ const defaultJSNotes = {
 	library: [],
 	list: [],
 	page: [],
-	search: ''
+	search: '',
+	uniqueTags: []
 };
 
 
@@ -26,11 +27,14 @@ export default function(state = defaultJSNotes, action) {
 				temp = [...action.payload.data["code"]];
 			}
 
+			// let uniqueTags = [...temp.map(o => o.snipRawTags)].sort((a,b) => a - b)
+			let uniqueTags = temp.reduce((acc, val) => acc.concat(val.snipTags), []).sort();
 			
 			return {
 				...state,
 				// library: [...action.payload.data["code"]]
-				library: [...temp]
+				library: [...temp], 
+				uniqueTags: [...uniqueTags]
 			}
 			
 		case UPDATE_SEARCH:

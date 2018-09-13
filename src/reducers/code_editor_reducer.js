@@ -14,16 +14,19 @@ const defaultJSNotes = {
 	term: '',			// the term input field
 	definition: '',		// the definition text area
 	languages: [],		// the languages the code is relevant for
-	snippets: []		// the code snippets
+	snippets: [],		// the code snippets,
+	uniqueTags: []
 };
 
 export default function(state = defaultJSNotes, action) {
 	switch(action.type) {
 		case FETCH_CODE_LIBRARY:
-			// console.log(action.payload.data)
+			let uniqueTags = [...action.payload.data].reduce((acc, val) => acc.concat(val.snipTags), []).sort();
+			console.log(uniqueTags)
 			return {
 				...state, 
-				library: [...action.payload.data]
+				library: [...action.payload.data],
+				uniqueTags: [...uniqueTags]
 			}
 		case CLICK_COLLECTION_ITEM:
 			return {

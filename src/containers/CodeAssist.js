@@ -58,7 +58,11 @@ class JSHelper extends Component {
 		
 	}
 
-	// Renders search results block
+
+	//=============================================================================================
+	// Renders All Search Results
+	//
+	//  
 
 	renderAllSearch() {
 		if(this.props.code_blocks.search === '') {
@@ -77,6 +81,7 @@ class JSHelper extends Component {
 		)
 	}
 
+	//=============================================================================================
 	// Renders Concept search results: TOP LEVEL item
 	renderSearch() {
 		if(this.props.code_blocks.search === '') {
@@ -103,7 +108,10 @@ class JSHelper extends Component {
 		});
 	}
 
+	//=============================================================================================
 	// Renders Keyword & Tag search results: tags
+	// I need to change this => you are narrowing down a list of tags and then within those tags
+	// there could be a number of items that have that tag. How do I list multiple items for each tag?
 	renderKeywords() {
 		if(this.props.code_blocks.search === '') {
 			return;
@@ -169,7 +177,7 @@ class JSHelper extends Component {
 						// onFocus={() => this.props.changeFocus(true)}
 						onFocus={() => setTimeout(() => this.props.changeFocus(true), 50)}
 						// onBlur={() => this.props.changeFocus(false)}
-						onBlur={() => setTimeout(() => this.props.changeFocus(false), 150)}/>
+						 onBlur={() =>  setTimeout(() => this.props.changeFocus(false), 150)} />
 					<div className="results">
 						{this.renderAllSearch()}
 					</div>

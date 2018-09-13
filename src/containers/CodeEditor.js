@@ -48,7 +48,8 @@ class CodeEditor extends Component {
 				snipRawTags: '',
 				snipTags: [],
 				snipCode: []
-			}
+			}, 
+			tagSuggstions: []
 		}
 	}
 
@@ -275,6 +276,13 @@ class CodeEditor extends Component {
 	// 	}
 	// }
 
+	renderTagSuggestions() {
+		return (
+			<div className=""></div>
+		)
+		
+	}
+
 	renderCodeInputs() {
 		if(!this.state.existing) {
 			let existing = false;
@@ -319,6 +327,7 @@ class CodeEditor extends Component {
 			        			value={this.state.newCodeObject.snipRawTags}
 			        			/>
 			        	<label htmlFor="term">Tags</label>
+			        	{this.renderTagSuggestions()}
 			        </div>
 	                <div className="col s12">
 	                <a className="waves-effect waves-light btn"
@@ -372,6 +381,7 @@ class CodeEditor extends Component {
 			        			value={this.state.existingCodeObject.snipRawTags}
 			        			/>
 			        	<label className="active" htmlFor="term">Tags</label>
+			        	{this.renderTagSuggestions()}
 			        </div>
 	                <div className="col s12">
 	                <a className="waves-effect waves-light btn"
@@ -405,6 +415,9 @@ class CodeEditor extends Component {
 			// let array = value.split(', ');
 			// info['snipTags'] = array;
 			info['snipRawTags'] = value;
+
+			// I need to start creating a list of possible tags
+
 		}
 
 		info['snipCode'] = info['snipRawCode'] ? [...info['snipRawCode'].split('\n')] : [];
