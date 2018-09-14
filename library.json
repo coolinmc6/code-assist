@@ -2290,6 +2290,38 @@
         "// into one big array",
         "let uniqueTags = array.reduce((acc, val) => acc.concat(val.snipTags), []);"
       ]
+    },
+    {
+      "id": 209283236703915900000,
+      "term": "Bootstrap btn Class",
+      "description": "",
+      "language": "CSS",
+      "snipRawCode": ".btn {\n    display: inline-block;\n    font-weight: 400;\n    text-align: center;\n    white-space: nowrap;\n    vertical-align: middle;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none;\n    border: 1px solid transparent;\n    padding: .375rem .75rem;\n    font-size: 1rem;\n    line-height: 1.5;\n    border-radius: .25rem;\n    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out\n}",
+      "snipRawTags": "Bootstrap btn,bootstrap,bootstrap button",
+      "snipTags": [
+        "Bootstrap btn",
+        "bootstrap",
+        "bootstrap button"
+      ],
+      "snipCode": [
+        ".btn {",
+        "    display: inline-block;",
+        "    font-weight: 400;",
+        "    text-align: center;",
+        "    white-space: nowrap;",
+        "    vertical-align: middle;",
+        "    -webkit-user-select: none;",
+        "    -moz-user-select: none;",
+        "    -ms-user-select: none;",
+        "    user-select: none;",
+        "    border: 1px solid transparent;",
+        "    padding: .375rem .75rem;",
+        "    font-size: 1rem;",
+        "    line-height: 1.5;",
+        "    border-radius: .25rem;",
+        "    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out",
+        "}"
+      ]
     }
   ]
 }
