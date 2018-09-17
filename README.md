@@ -56,7 +56,7 @@ json-server new_spippets.json -p 3004
 	+ *Term*: the name of the concept, function, etc. for the snippet
 	+ *Description*: a written description of what the snippet is and is used for. Be as verbose or brief as you wish!
 	+ *Language*: **Code Assist** currently supports five languages: CSS, HTML, JavaScript, PHP, and Python (but I will be adding more!)
-	+ *Code Snippets*: the code that you want to save. **Note**: I have found that it works best to write working code in a Code Editor or CodePen and then copy and paste it into this box.
+	+ *Code Snippets*: the code that you want to save. **Note**: I have found that it works best to write working code in a text editor (i.e. Sublime Text, Atom, Visual Studio Code, etc.) or CodePen and then copy and paste it into this box.
 	+ *Tags*: the tags by which you want to find this snippet, separated by commas. For example, if you wanted you had a Bubble Sort algorithm and you wanted the following tags: "sorting", "algorithm", "bubble sort", you simply type the following (no quotes): "sorting, algorith, bubble sort"
 - when you are finished, simply click "Save Snippet"
 - You will now be able to find that snippet by its "name" or *Term* in the list on the right hand side.
