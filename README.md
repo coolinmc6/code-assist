@@ -30,6 +30,23 @@ And now you are all set! Code Assist comes with a small library of snippets that
 
 ## Using Code Assist
 
+### Setting Up Your Library
+- **Code Assist** comes with a library of example snippets in the `library.json` file. If, however, you'd like to start fresh, you can create a new json file to hold your snippets. The structure for your library is an object with one property, `"code"`, that has a value of an empty array:
+
+```json
+{
+	"code": []
+}
+```
+
+- And now you're all set!
+- If you created a separate json file with a name other than `library.json`, simply stop running JSON-Server and restart it watching the new file name:
+
+```sh
+# JSON-Server to watch the file "new_snippets.json"
+json-server new_spippets.json -p 3004
+```
+
 ### Adding, Editing and Deleting Snippets
 - The **Code Editor** page is where you can add, edit, and delete snippets.
 
