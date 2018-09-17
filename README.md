@@ -35,7 +35,7 @@ And now you are all set! Code Assist comes with a small library of snippets that
 
 ```json
 {
-	"code": []
+  "code": []
 }
 ```
 
