@@ -2655,6 +2655,26 @@
         "}",
         "  "
       ]
+    },
+    {
+      "id": 318721491904675250000,
+      "term": "Strip HTML and PHP tags",
+      "description": "Remove HTML and PHP tags from a string.",
+      "language": "PHP",
+      "snipRawCode": "$text = '<p>Test paragraph.</p><!-- Comment --> <a href=\"#fragment\">Other text</a>';\necho strip_tags($text);\n// Result: Test paragraph. Other text\n\n// Allow <p> and <a>\necho strip_tags($text, '<p><a>');\n// Result: <p>Test paragraph.</p> <a href=\"#fragment\">Other text</a>",
+      "snipRawTags": "strip tags",
+      "snipTags": [
+        "strip tags"
+      ],
+      "snipCode": [
+        "$text = '<p>Test paragraph.</p><!-- Comment --> <a href=\"#fragment\">Other text</a>';",
+        "echo strip_tags($text);",
+        "// Result: Test paragraph. Other text",
+        "",
+        "// Allow <p> and <a>",
+        "echo strip_tags($text, '<p><a>');",
+        "// Result: <p>Test paragraph.</p> <a href=\"#fragment\">Other text</a>"
+      ]
     }
   ]
 }
