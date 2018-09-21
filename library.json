@@ -261,11 +261,23 @@
     {
       "id": 14,
       "term": "Detecting Properties on Objects",
-      "description": "",
+      "description": "The hasOwnProperty() method returns a boolean indicating whether the object has the specified property as its own property (as opposed to inheriting it).",
       "language": "JavaScript",
-      "snipRawCode": "",
+      "snipRawCode": "const object1 = new Object();\nobject1.property1 = 42;\n\nconsole.log(object1.hasOwnProperty('property1'));\n// expected output: true\n\nconsole.log(object1.hasOwnProperty('toString'));\n// expected output: false\n\nconsole.log(object1.hasOwnProperty('hasOwnProperty'));\n// expected output: false",
       "snipRawTags": "hasOwnProperty",
-      "snipCode": [],
+      "snipCode": [
+        "const object1 = new Object();",
+        "object1.property1 = 42;",
+        "",
+        "console.log(object1.hasOwnProperty('property1'));",
+        "// expected output: true",
+        "",
+        "console.log(object1.hasOwnProperty('toString'));",
+        "// expected output: false",
+        "",
+        "console.log(object1.hasOwnProperty('hasOwnProperty'));",
+        "// expected output: false"
+      ],
       "snipTags": [
         "hasOwnProperty"
       ]
@@ -503,10 +515,55 @@
       "term": "Call, Bind and Apply Comparison",
       "description": "",
       "language": "JavaScript",
-      "snipRawCode": "",
-      "snipRawTags": "",
-      "snipCode": [],
-      "snipTags": []
+      "snipRawCode": "// Source for notes:\n// https://medium.com/@owenyangg/javascript-call-apply-and-bind-explained-to-a-total-noob-63f146684564\n\n//==============\n// Notes\n// - call(), apply(), and bind() are just methods of functions \n//    like split() is for an array\n// - call(), apply(), and bind() allow you to set the context of\n//    \"this\" inside a function\n// - call() and apply() are similar but different from a syntax\n//    standpoint: \n// - call() requires the \"this\" first and then lists the arguments \n//    individually, whereas... \n// - apply() requires the \"this\" first and then takes an array\n//    of all the arguments\n// - bind() returns a function, the original function isn't \n//    actually invoked right away\n\nvar person = { name: \"Colin\" }\n\nfunction speak(greeting, end) {\n   let s = `${greeting} ${this.name}, ${end}`;\n   console.log(s)\n}\n\n// Without using call()\nspeak(\"Hey\", \"what's up?\"); // Hey , what's up?\n// NOTICE => this.name is undefined so it's blank\n// with \"use strict\", you get an error\n\n// Using call()\nspeak.call(person, \"Hey\", \"what's up (with call)?\") \n// Hey Colin, what's up (with call)?\n\n// Using apply()\nspeak.apply(person, [\"Hey\", \"what's up (with apply)?\"]) \n// Hey Colin, what's up (with apply)?\n\n// Using bind()\nlet speakToColin = speak.bind(person) // creates the new function\nspeakToColin(\"Hey\", \"what's up (with bind)?\") \n// Hey Colin, what's up (with bind)?",
+      "snipRawTags": "call bind apply",
+      "snipCode": [
+        "// Source for notes:",
+        "// https://medium.com/@owenyangg/javascript-call-apply-and-bind-explained-to-a-total-noob-63f146684564",
+        "",
+        "//==============",
+        "// Notes",
+        "// - call(), apply(), and bind() are just methods of functions ",
+        "//    like split() is for an array",
+        "// - call(), apply(), and bind() allow you to set the context of",
+        "//    \"this\" inside a function",
+        "// - call() and apply() are similar but different from a syntax",
+        "//    standpoint: ",
+        "// - call() requires the \"this\" first and then lists the arguments ",
+        "//    individually, whereas... ",
+        "// - apply() requires the \"this\" first and then takes an array",
+        "//    of all the arguments",
+        "// - bind() returns a function, the original function isn't ",
+        "//    actually invoked right away",
+        "",
+        "var person = { name: \"Colin\" }",
+        "",
+        "function speak(greeting, end) {",
+        "   let s = `${greeting} ${this.name}, ${end}`;",
+        "   console.log(s)",
+        "}",
+        "",
+        "// Without using call()",
+        "speak(\"Hey\", \"what's up?\"); // Hey , what's up?",
+        "// NOTICE => this.name is undefined so it's blank",
+        "// with \"use strict\", you get an error",
+        "",
+        "// Using call()",
+        "speak.call(person, \"Hey\", \"what's up (with call)?\") ",
+        "// Hey Colin, what's up (with call)?",
+        "",
+        "// Using apply()",
+        "speak.apply(person, [\"Hey\", \"what's up (with apply)?\"]) ",
+        "// Hey Colin, what's up (with apply)?",
+        "",
+        "// Using bind()",
+        "let speakToColin = speak.bind(person) // creates the new function",
+        "speakToColin(\"Hey\", \"what's up (with bind)?\") ",
+        "// Hey Colin, what's up (with bind)?"
+      ],
+      "snipTags": [
+        "call bind apply"
+      ]
     },
     {
       "id": 27,
@@ -693,7 +750,7 @@
       "description": "",
       "language": "JavaScript",
       "snipRawCode": "// - This is an alternative object-oriented solution for inheritance\n// - prototypal inheritance is just the prototype chain - there are no classes that we \n// have to worry about\n// - this is seen as a more natural type of OO programming in JavaScript\n\"use strict\"\nvar Person = {\n\tinit: function(first_name, last_name) {\n\t\tthis.first_name = first_name;\n\t\tthis.last_name = last_name;\n\t\treturn this;\n\t},\n\tfull_name: function() {\n\t\treturn this.first_name + ' ' + this.last_name;\n\t}\n}\n\n// Version #1: creating an instance\nvar asim = Object.create(Person);\nasim.init(\"asim\", \"hussain\");",
-      "snipRawTags": "prototype OO pattern",
+      "snipRawTags": "prototype OO pattern,OOP,object-oriented programming",
       "snipCode": [
         "// - This is an alternative object-oriented solution for inheritance",
         "// - prototypal inheritance is just the prototype chain - there are no classes that we ",
@@ -716,7 +773,9 @@
         "asim.init(\"asim\", \"hussain\");"
       ],
       "snipTags": [
-        "prototype OO pattern"
+        "prototype OO pattern",
+        "OOP",
+        "object-oriented programming"
       ]
     },
     {
@@ -834,7 +893,7 @@
       "description": "",
       "language": "JavaScript",
       "snipRawCode": "// ES5\nfunction Car(options) {\n\tthis.title = options.title;\n}\n\nCar.prototype.drive = function() {\n\treturn 'vroom';\n};\n \n\nfunction Toyota(options) {\n\tCar.call(this, options);\n\tthis.color = options.color; \n}\n \nToyota.prototype = Object.create(Car.prototype);\nToyota.prototype.constructor = Toyota;\nToyota.prototype.honk = function() {\n\treturn 'beep'\n};\n \nconst car = new Toyota({color: 'red', title: 'Daily Driver'});\n \nconsole.log(car.honk()); // beep\nconsole.log(car.drive()); // vroom\n \n \n// ES6\nclass Car {\n \tconstructor({title}) {\n \t\tthis.title = title\n \t}\n\tdrive() {\n\t\treturn 'vroom' \n\t}\n \n};\n\n\nclass Toyota extends Car {\n\tconstructor(options) {\n\t\tsuper(options);\t\t// Car.constructor()\n\t\tthis.color = options.color;\n\t}\n \n\thonk() {\n\t\treturn 'beep';\n\t};\n}\n \nconst toyota = new Toyota({color: 'red', title: 'CMs Car'});\n \nconsole.log(toyota.honk()) // beep\nconsole.log(toyota.drive()); // vroom",
-      "snipRawTags": "ES5 vs. ES6 Classes",
+      "snipRawTags": "ES5 vs. ES6 Classes,OOP,object-oriented programming",
       "snipCode": [
         "// ES5",
         "function Car(options) {",
@@ -892,7 +951,9 @@
         "console.log(toyota.drive()); // vroom"
       ],
       "snipTags": [
-        "ES5 vs. ES6 Classes"
+        "ES5 vs. ES6 Classes",
+        "OOP",
+        "object-oriented programming"
       ]
     },
     {
