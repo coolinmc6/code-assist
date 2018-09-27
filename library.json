@@ -2808,6 +2808,85 @@
         "    background-color: #343a40;",
         "}"
       ]
+    },
+    {
+      "id": 791348334768210200000,
+      "term": "Python Dictionaries",
+      "description": "",
+      "language": "Python",
+      "snipRawCode": "// pretty similar to JavaScript\nobj = {\n    'symbol': stock['symbol'],  # notice that I can't use dot notation (at least not in my IDE)\n    'price': price,\n    'shares': stock['shares'],\n    'value': price * stock['shares']\n}",
+      "snipRawTags": "create dictionary,get values from dictionary",
+      "snipTags": [
+        "create dictionary",
+        "get values from dictionary"
+      ],
+      "snipCode": [
+        "// pretty similar to JavaScript",
+        "obj = {",
+        "    'symbol': stock['symbol'],  # notice that I can't use dot notation (at least not in my IDE)",
+        "    'price': price,",
+        "    'shares': stock['shares'],",
+        "    'value': price * stock['shares']",
+        "}"
+      ]
+    },
+    {
+      "id": 844768749626749100000,
+      "term": "Flask - Get Variables from POST/GET",
+      "description": "",
+      "language": "Python",
+      "snipRawCode": "// Raw POST request value\nrequest.form.get(\"symbol\")\n\n// Creating a variable\nsymbol = request.form.get(\"symbol\")",
+      "snipRawTags": "flask POST variables,flask GET variables",
+      "snipTags": [
+        "flask POST variables",
+        "flask GET variables"
+      ],
+      "snipCode": [
+        "// Raw POST request value",
+        "request.form.get(\"symbol\")",
+        "",
+        "// Creating a variable",
+        "symbol = request.form.get(\"symbol\")"
+      ]
+    },
+    {
+      "id": 221051654612988360000,
+      "term": "Flask - Pass Variable to Template",
+      "description": "",
+      "language": "Python",
+      "snipRawCode": "if request.method == \"POST\":\n        symbol = request.form.get(\"symbol\")\n        hash = lookup(symbol)\n\n        return render_template(\"quoted.html\", hash=hash)",
+      "snipRawTags": "pass variables into a template",
+      "snipTags": [
+        "pass variables into a template"
+      ],
+      "snipCode": [
+        "if request.method == \"POST\":",
+        "        symbol = request.form.get(\"symbol\")",
+        "        hash = lookup(symbol)",
+        "",
+        "        return render_template(\"quoted.html\", hash=hash)"
+      ]
+    },
+    {
+      "id": 672473387658482500000,
+      "term": "Logging in Python",
+      "description": "",
+      "language": "Python",
+      "snipRawCode": "// import at the top of file\nimport logging\n\n// you can log a list\nlogging.warning(raw) # [{'symbol': 'AAPL', 'shares': 2}, {'symbol': 'MSFT', 'shares': 3}]\n\n// ...or just a number\nlogging.warning(cash) # 49,550.34",
+      "snipRawTags": "python logging",
+      "snipTags": [
+        "python logging"
+      ],
+      "snipCode": [
+        "// import at the top of file",
+        "import logging",
+        "",
+        "// you can log a list",
+        "logging.warning(raw) # [{'symbol': 'AAPL', 'shares': 2}, {'symbol': 'MSFT', 'shares': 3}]",
+        "",
+        "// ...or just a number",
+        "logging.warning(cash) # 49,550.34"
+      ]
     }
   ]
 }
