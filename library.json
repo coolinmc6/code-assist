@@ -2887,6 +2887,33 @@
         "// ...or just a number",
         "logging.warning(cash) # 49,550.34"
       ]
+    },
+    {
+      "id": 781468972775661200000,
+      "term": "jQuery Tips",
+      "description": "",
+      "language": "JavaScript",
+      "snipRawCode": "//=================================================\n// Checkboxes (input)\n// Action: Mark a checkbox input unchecked\n$(selector).attr('checked', false)\n\n// Action: See if element is checked\n$('input').is(':checked') // returns true or false\n\n//=================================================\n// Dropdowns (select)\n// Action: Have a particular option selected\n$('select option[value=\"0\"]').attr('selected', true)\n\n",
+      "snipRawTags": "jQuery",
+      "snipCode": [
+        "//=================================================",
+        "// Checkboxes (input)",
+        "// Action: Mark a checkbox input unchecked",
+        "$(selector).attr('checked', false)",
+        "",
+        "// Action: See if element is checked",
+        "$('input').is(':checked') // returns true or false",
+        "",
+        "//=================================================",
+        "// Dropdowns (select)",
+        "// Action: Have a particular option selected",
+        "$('select option[value=\"0\"]').attr('selected', true)",
+        "",
+        ""
+      ],
+      "snipTags": [
+        "jQuery"
+      ]
     }
   ]
 }
