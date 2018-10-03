@@ -2914,6 +2914,22 @@
       "snipTags": [
         "jQuery"
       ]
+    },
+    {
+      "id": 454242460580571500000,
+      "term": "Error Log",
+      "description": "Print an array to an error_log. Error log is for strings only so to log an array, you have to wrap it in print_r() and add the \"TRUE\" flag.",
+      "language": "PHP",
+      "snipRawCode": "// \nerror_log(print_r($_POST, TRUE));",
+      "snipRawTags": "error_log,error_log an array",
+      "snipTags": [
+        "error_log",
+        "error_log an array"
+      ],
+      "snipCode": [
+        "// ",
+        "error_log(print_r($_POST, TRUE));"
+      ]
     }
   ]
 }
