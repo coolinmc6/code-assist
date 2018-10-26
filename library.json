@@ -2930,6 +2930,21 @@
         "// ",
         "error_log(print_r($_POST, TRUE));"
       ]
+    },
+    {
+      "id": 12469293585559260000,
+      "term": "Duplicate SQL Table with Data",
+      "description": "This code allows you to duplicate a table with all the data into a new table. This performs both the \"CREATE\" and \"INSERT INTO\" functions in one quick query.",
+      "language": "SQL",
+      "snipRawCode": "CREATE TABLE new_table AS \nSELECT * FROM old_table;",
+      "snipRawTags": "duplicate SQL table",
+      "snipTags": [
+        "duplicate SQL table"
+      ],
+      "snipCode": [
+        "CREATE TABLE new_table AS ",
+        "SELECT * FROM old_table;"
+      ]
     }
   ]
 }
