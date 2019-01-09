@@ -146,7 +146,7 @@ class CodeEditor extends Component {
 						let text = line == "" ? " " : line;
 						// const html = Prism.highlight(line, Prism.languages.javascript);
 						const html = Prism.highlight(text, Prism.languages[prismProp]);
-						console.log(line);
+						// console.log(line);
 						return (
 
 							<div key={Math.floor(Math.random()*10000000000)}
